@@ -19,26 +19,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       //initialize the ads
-        AdsAul myAds=new AdsAul(this);
-        // load ads to display Ads to user
-        myAds.DisplayAds();
         txtDisplay=(TextView)findViewById(R.id.textv);
     }
 
     //load phone message when click button
     public void buLoadMessage(View view) {
 
+        //check if the API>=23 to display runtime request permison
         if ((int) Build.VERSION.SDK_INT >= 23)
         {
+            // check if this permission is not grated yet
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_SMS) !=
                     PackageManager.PERMISSION_GRANTED )
             {
                 //shouldShowRequestPermissionRationale(). This method returns true
                 // if the app has requested this permission previously and the user denied the request.
                 if (!shouldShowRequestPermissionRationale(Manifest.permission.READ_SMS)) {
-                    requestPermissions(new String[]{Manifest.permission.READ_SMS},
-                            REQUEST_CODE_ASK_PERMISSIONS);
+                    // display request permission
+                   requestPermissions(new String[]{Manifest.permission.READ_SMS},
+                           REQUEST_CODE_ASK_PERMISSIONS);
                     return   ;
 
                 }
@@ -52,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //get access to mailbox
     final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
+    //request permsion result
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults)
     {
@@ -102,5 +102,10 @@ public class MainActivity extends AppCompatActivity {
         }   catch(Exception ex){
 
         }
+
+        //initialize the ads
+        AdsAul myAds=new AdsAul(this);
+        // load ads to display Ads to user
+        myAds.DisplayAds();
     }
 }
