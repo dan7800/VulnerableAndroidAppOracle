@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="right" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <WebView android:id="@id/webView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="horizontal" android:background="@color/white" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_weight="0.0">
+            <Button android:textSize="12.0dip" android:textStyle="bold" android:textColor="@color/darkblue" android:id="@id/buhome" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/news" android:drawableRight="@drawable/anamhome" android:drawablePadding="8.0dip" android:layout_weight="1.0" android:onClick="bunews" />
+            <Button android:textSize="12.0dip" android:textStyle="bold" android:textColor="@color/darkblue" android:id="@id/bulogotype" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/viedo" android:drawableRight="@drawable/anamlogotype" android:drawablePadding="8.0dip" android:layout_weight="1.0" android:onClick="buyoutube" />
+            <Button android:textSize="12.0dip" android:textStyle="bold" android:textColor="@color/darkblue" android:id="@id/bunewsa" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/ajala" android:drawableRight="@drawable/anamnewsa" android:drawablePadding="8.0dip" android:layout_weight="1.0" android:onClick="buajala" />
+            <Button android:textSize="12.0dip" android:textStyle="bold" android:textColor="@color/darkblue" android:id="@id/buadd" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/resource" android:drawableRight="@drawable/anamadd" android:drawablePadding="8.0dip" android:layout_weight="1.0" android:onClick="onadd" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Navigate home</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
+    <string name="abc_action_bar_up_description">Navigate up</string>
+    <string name="abc_action_menu_overflow_description">More options</string>
+    <string name="abc_action_mode_done">Done</string>
+    <string name="abc_activity_chooser_view_see_all">See all</string>
+    <string name="abc_activitychooserview_choose_application">Choose an app</string>
+    <string name="abc_search_hint">Search…</string>
+    <string name="abc_searchview_description_clear">Clear query</string>
+    <string name="abc_searchview_description_query">Search query</string>
+    <string name="abc_searchview_description_search">Search</string>
+    <string name="abc_searchview_description_submit">Submit query</string>
+    <string name="abc_searchview_description_voice">Voice search</string>
+    <string name="abc_shareactionprovider_share_with">Share with</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="Unfolow">إلغاء متابعة</string>
+    <string name="action_reply">Reply</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+    <string name="ajala">عاجل</string>
+    <string name="app_name">آخر الأخبار</string>
+    <string name="folow">متابعة</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="new_message_notification_placeholder_text_template">You said %1$s and lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit vel semper venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis. Pellentesque vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper ornare lacus. Duis ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis viverra rhoncus sit amet nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec tortor.</string>
+    <string name="new_message_notification_title_template">New message: %1$s</string>
+    <string name="news">الرئيسية</string>
+    <string name="numberfollowers">عدد المتابعين</string>
+    <string name="resource">المصادر</string>
+    <string name="search_hint">search for item</string>
+    <string name="search_title">search</string>
+    <string name="title_activity_resources_name">اسم المصادر-</string>
+    <string name="title_activity_sub_resources">القنوات</string>
+    <string name="title_activity_welcome">welcomeActivity</string>
+    <string name="viedo">فيديو</string>
+</resources>
