@@ -15,14 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <!-- register the broadcast to listen to action names com.example.Broadcast-->
         <receiver android:name=".MyReceiver" android:priority="2147483647" >
             <intent-filter>
                 <action android:name="com.example.Broadcast" >
                 </action>
             </intent-filter>
         </receiver>
-
+ <!-- register the service-->
         <service
             android:name=".ServiceNotification"
             android:exported="false" >
