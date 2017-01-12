@@ -1,1 +1,1 @@
-# VulerableAndroidAppOracle
+# VulnerableAndroidAppOracle
