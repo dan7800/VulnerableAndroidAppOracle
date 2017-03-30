@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/hussienalrubaye/Desktop/AdLibraries/sourcecode/source code/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/hussienalrubaye/Desktop/AdLibraries/sourcecode/source code/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_918f861fef9b3bc678515f3d9005199196dd1fe3.jar" />
+    </item>
+    <item
+        jar="/Users/hussienalrubaye/Desktop/AdLibraries/sourcecode/source code/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/hussienalrubaye/Desktop/AdLibraries/sourcecode/source code/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_a0629c5769a82067cad6bd18b68b6e5945e47ff6.jar" />
+    </item>
+    <item
+        jar="/Users/hussienalrubaye/Desktop/AdLibraries/sourcecode/source code/app/build/intermediates/exploded-aar/source code/adslibrary/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7f85581c1de7744da80511887f868db758236287">
+        <dex dex="/Users/hussienalrubaye/Desktop/AdLibraries/sourcecode/source code/app/build/intermediates/pre-dexed/debug/source code-adslibrary-unspecified_f9a718e08fdc02b0be0b302bd66bebb00a0dc811.jar" />
+    </item>
+    <item
+        jar="/Users/hussienalrubaye/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/hussienalrubaye/Desktop/AdLibraries/sourcecode/source code/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_960569bdb0f4a01c874f2c21d28bf7467fb481a1.jar" />
+    </item>
+    <item
+        jar="/Users/hussienalrubaye/Desktop/AdLibraries/sourcecode/source code/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/hussienalrubaye/Desktop/AdLibraries/sourcecode/source code/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_0435cd40330d88cd2329b9d500a83ef0f42872bc.jar" />
+    </item>
+
+</items>

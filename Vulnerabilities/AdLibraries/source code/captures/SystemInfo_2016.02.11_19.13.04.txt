@@ -1,0 +1,26 @@
+TASK com.example.hussienalrubaye.androidadsvulerabilites id=15
+  ACTIVITY com.example.hussienalrubaye.androidadsvulerabilites/.MainActivity 411c7ab8 pid=22837
+    Local FragmentActivity 411e0e40 State:
+      mCreated=truemResumed=true mStopped=false mReallyStopped=false
+      mLoadersStarted=true
+    FragmentManager misc state:
+      mHost=android.support.v4.app.FragmentActivity$HostCallbacks@411e1d08
+      mContainer=android.support.v4.app.FragmentActivity$HostCallbacks@411e1d08
+      mCurState=5 mStateSaved=false mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{411e9800 V.E..... ... 0,0-540,960}
+        android.widget.LinearLayout{411ee080 V.E..... ... 0,0-540,960}
+          android.view.ViewStub{411f1c38 G.E..... ... 0,0-0,0 #102036e}
+          android.widget.FrameLayout{411f2010 V.E..... ... 0,38-540,960}
+            android.support.v7.widget.ActionBarOverlayLayout{411f84d0 V.ED.... ... 0,0-540,922 #7f0c003f app:id/decor_content_parent}
+              android.support.v7.widget.ContentFrameLayout{411fb670 V.ED.... ... 0,84-540,922 #1020002 android:id/content}
+                android.widget.RelativeLayout{41214ac8 V.E..... ... 0,0-540,838}
+                  android.widget.LinearLayout{41214ff0 V.E..... ... 0,0-540,838}
+                    android.support.v7.widget.AppCompatButton{41215bc8 VFED..C. ... 0,0-540,72 #7f0c0050 app:id/buLoadSms}
+                    android.widget.ScrollView{41218e80 VFED.V.. ... 0,72-540,213 #7f0c0033 app:id/scrollView}
+                      android.support.v7.widget.AppCompatTextView{4122cab0 V.ED.... ... 0,0-540,141 #7f0c0051 app:id/textv}
+              android.support.v7.widget.ActionBarContainer{411fc258 V.ED.... ... 0,0-540,84 #7f0c0040 app:id/action_bar_container}
+                android.support.v7.widget.Toolbar{411fdb50 V.E..... ... 0,0-540,84 #7f0c0041 app:id/action_bar}
+                  android.widget.TextView{412101f8 V.ED.... ... 24,21-351,62}
+                  android.support.v7.widget.ActionMenuView{41261328 V.E..... ... 540,0-540,84}
+                android.support.v7.widget.ActionBarContextView{4120a7a8 G.E..... ... 0,0-0,0 #7f0c0042 app:id/action_context_bar}
