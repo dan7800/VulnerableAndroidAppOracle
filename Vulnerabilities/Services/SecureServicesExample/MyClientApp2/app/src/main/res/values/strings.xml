@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyClientApp2</string>
+    <string name="invoke_service_btn">Get New Random Number</string>
+    <string name="bind_to_service_btn">Bind to Math Service</string>
+</resources>

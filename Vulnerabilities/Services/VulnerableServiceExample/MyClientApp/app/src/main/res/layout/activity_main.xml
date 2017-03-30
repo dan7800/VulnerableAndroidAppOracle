@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    tools:context="com.example.heena.myclientapp.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize = "20sp"
+        android:id="@+id/TextView1"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bind_to_service_btn"
+        android:id="@+id/BindToServiceBtn"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invoke_service_btn"
+        android:id="@+id/InvokeServiceBtn"
+        android:layout_below="@+id/BindToServiceBtn"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/InvokeServiceBtn"
+        android:textSize = "20sp"
+        android:layout_marginTop="120dp"
+        android:id="@+id/ResultView"/>
+
+
+</RelativeLayout>
+
+

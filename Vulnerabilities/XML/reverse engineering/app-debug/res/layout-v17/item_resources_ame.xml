@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@drawable/barcolor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="7.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="25.0dip" android:textStyle="bold" android:textColor="#fffdfffa" android:gravity="center" android:id="@id/textView" android:background="@drawable/bucolor" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="news in new " android:textAlignment="gravity" />
-</LinearLayout>
