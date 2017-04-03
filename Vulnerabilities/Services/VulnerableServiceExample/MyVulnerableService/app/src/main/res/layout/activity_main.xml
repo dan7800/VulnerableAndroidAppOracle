@@ -8,34 +8,21 @@
     android:paddingBottom="20dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
-    tools:context="com.example.heena.myclientapp.MainActivity">
+    tools:context="com.example.heena.myvulnerableservice.MainActivity">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bind_to_service_btn"
-        android:id="@+id/BindToServiceBtn"
+        android:text="@string/start_service_btn"
+        android:id="@+id/StartServiceBtn"
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/invoke_service_btn"
-        android:id="@+id/InvokeServiceBtn"
-        android:layout_below="@+id/BindToServiceBtn"
+        android:text="@string/stop_service_btn"
+        android:id="@+id/StopServiceBtn"
+        android:layout_below="@+id/StartServiceBtn"
         android:layout_marginTop="10dp"/>
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_below="@+id/InvokeServiceBtn"
-        android:textSize = "20sp"
-        android:layout_marginTop="120dp"
-        android:id="@+id/ResultView"/>
-
-
 </RelativeLayout>
-
-

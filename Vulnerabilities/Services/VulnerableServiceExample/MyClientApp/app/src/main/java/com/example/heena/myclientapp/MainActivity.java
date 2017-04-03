@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.IBinder;
@@ -18,6 +19,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -50,15 +52,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final PackageManager pm = getPackageManager();
 
         //get a list of installed apps.
-        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+        List<ApplicationInfo> applications = pm.getInstalledApplications(PackageManager.GET_META_DATA);
 
-        for (ApplicationInfo packageInfo : packages) {
-            Log.i("My Client app","Package name is : " + packageInfo.packageName);
-            if((packageInfo.packageName + ".MyService").equals("com.example.heena.myserviceapp.MyService"))
+        for (ApplicationInfo applicationInfo: applications) {
+
+            CharSequence appName = pm.getApplicationLabel(applicationInfo);
+
+            if((appName).equals("MyVulnerableService"))
             {
-                Log.i("Broken !!! ", "Package name is : " + packageInfo.packageName);
+                Log.i("Broken !!! ", "Package name is : " + applicationInfo.packageName);
                 intent = new Intent();
-                intent.setComponent(new ComponentName("com.example.heena.myserviceapp","com.example.heena.myserviceapp.MyService"));
+                intent.setComponent(new ComponentName(applicationInfo.packageName,applicationInfo.packageName + "."+appName));
                 break;
             }
             else{
