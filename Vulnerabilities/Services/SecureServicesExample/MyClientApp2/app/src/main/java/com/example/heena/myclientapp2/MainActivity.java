@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         invokeServiceBtn.setOnClickListener(this);
 
         intent = new Intent();
-        intent.setComponent(new ComponentName("com.example.heena.myserviceapp","com.example.heena.myserviceapp.MyService"));
+        intent.setComponent(new ComponentName("com.example.heena.myserviceapp2","com.example.heena.myserviceapp2.MySecureService"));
+        intent.putExtra("calling activity","MyAuthorizedApp");
 
     }
 
@@ -108,6 +109,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.i("My Client App",e.getMessage());
             }
 
+        }else{
+            Log.i("Client","There was a problem binding to the service");
         }
     }
 

@@ -6,6 +6,8 @@ package com.example.heena.myserviceapp2;
 
 import android.app.Service;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
@@ -13,6 +15,8 @@ import android.os.Messenger;
 import android.os.RemoteException;
 
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.PermissionChecker;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -40,7 +44,13 @@ public class MySecureService extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        return messenger.getBinder();
+
+        String callingActivity = intent.getStringExtra("calling activity");
+        if(callingActivity != null && callingActivity.equals("MyAuthorizedApp")){
+            return messenger.getBinder();
+        }else{
+            throw new SecurityException("You are not allowed to consume this service");
+        }
     }
 
     @Override
