@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hussienalrubaye.androidjavascript.MainActivity">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -15,42 +15,50 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="URL:"
-                android:id="@+id/textView"
                 android:layout_weight="0"
+                android:text="URL:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="12dp" />
 
             <EditText
+                android:id="@+id/etURL"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/etURL"
                 android:layout_weight="1"
-                android:text="http://nodejs.alruabye.net/News.html"
+                android:text="https://goo.gl/TIGDOb"
                 android:textSize="12dp" />
 
             <Button
+                android:id="@+id/buGo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Go"
-                android:id="@+id/buGo"
-                android:layout_weight="0" />
+                android:layout_weight="0"
+                android:text="Go" />
 
         </LinearLayout>
 
-        <WebView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/wvURL"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <WebView
+                android:id="@+id/wvURL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="0" />
+        </LinearLayout>
+
     </LinearLayout>
 </RelativeLayout>
