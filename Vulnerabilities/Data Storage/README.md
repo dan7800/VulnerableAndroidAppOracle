@@ -31,24 +31,50 @@ In this tutorial, we will build a simple Android app that allows users to store 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image4.png" alt="Image">
 
 5. Delete the “Hello World” TextView by selecting the TextView and then press the delete button on your keyboard.
-6. Add two Text Fields (EditTexts) and one Button to the layout by simply dragging them from the palette block on the left side to the app layout. Note, you can see the names of all elements in the layout on the down left side under the “Component Tree” section.  
+6. Copy and paste the following code into acitivity_main.xml
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-Once you have the two EditTexts and the Button on the device layout, click on the first EditText and change its properties from right side panel to the following:
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:id="@+id/usernameEditText"
+        android:hint="Username" />
 
-* ID: usernameEditText
-* Hint: Username
-* Delete the value in “text” under TextView
-* Keep other properties as they are.
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/usernameEditText"
+        android:layout_alignStart="@+id/usernameEditText"
+        android:layout_marginTop="21dp"
+        android:id="@+id/passwordEditText"
+        android:hint="Password" />
 
-Change the following properties for the second EditText from the properties panel on right side to the following:
+    <Button
+        android:text="Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:id="@+id/storeButton" />
 
-* ID: passwordEditText
-* Hint: Password
+</RelativeLayout>
 
-Change the following properties for the Button from the properties panel on right side to the following:
-
-* ID: storeButton
-* Text: Store
+```
 
 Once you have completed step 6, your app layout should look like the following image.
 
