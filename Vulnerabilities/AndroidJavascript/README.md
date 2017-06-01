@@ -263,10 +263,12 @@ public class MainActivity extends AppCompatActivity {
 
     EditText etURL; //navigation url
     WebView browser; // web browser
-
-    // host name
-    String HostingURL = "https://goo.gl/TIGDOb";
-
+```
+```diff
++   // host name
++   String HostingURL = "https://goo.gl/TIGDOb";
+```
+```java
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -332,14 +334,16 @@ public class MainActivity extends AppCompatActivity {
         //This method return user phone number to the javascript calls from website
         @JavascriptInterface   // must be added for API 17 or higher
         public String GetPhoneNumber() {
-
-            // only send the phone to authorize website
-            if(etURL.getText().toString().indexOf(HostingURL)==0)
+```
+```diff
++           // only send the phone to authorize website
++           if(etURL.getText().toString().indexOf(HostingURL)==0)
                 return GetUserPhoneNumber();
 
-            else
-                return  null;
-
++           else
++               return  null;
+```
+```java
         }
 
     }
