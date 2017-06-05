@@ -35,42 +35,42 @@ In this tutorial, we will build a simple Android app that allows users to store 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
-        android:id="@+id/usernameEditText"
-        android:hint="Username" />
+<EditText
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:inputType="textPersonName"
+android:ems="10"
+android:layout_alignParentTop="true"
+android:layout_centerHorizontal="true"
+android:layout_marginTop="23dp"
+android:id="@+id/usernameEditText"
+android:hint="Username" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_below="@+id/usernameEditText"
-        android:layout_alignStart="@+id/usernameEditText"
-        android:layout_marginTop="21dp"
-        android:id="@+id/passwordEditText"
-        android:hint="Password" />
+<EditText
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:inputType="textPassword"
+android:ems="10"
+android:layout_below="@+id/usernameEditText"
+android:layout_alignStart="@+id/usernameEditText"
+android:layout_marginTop="21dp"
+android:id="@+id/passwordEditText"
+android:hint="Password" />
 
-    <Button
-        android:text="Store"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/passwordEditText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
-        android:id="@+id/storeButton" />
+<Button
+android:text="Store"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@+id/passwordEditText"
+android:layout_centerHorizontal="true"
+android:layout_marginTop="23dp"
+android:id="@+id/storeButton" />
 
 </RelativeLayout>
 
@@ -97,50 +97,50 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String MY_PREFERENCES = "MyPrefLogin" ;
-    public static final String USERNAME = "UsernameKey" ;
-    public static final String USER_PASSWORD = "PasswordKey" ;
-    SharedPreferences mSharedPreferences;
-    EditText mUsernameEditText, mPasswordEditText;
-    Button mStoreButton;
+public static final String MY_PREFERENCES = "MyPrefLogin" ;
+public static final String USERNAME = "UsernameKey" ;
+public static final String USER_PASSWORD = "PasswordKey" ;
+SharedPreferences mSharedPreferences;
+EditText mUsernameEditText, mPasswordEditText;
+Button mStoreButton;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_main);
 
-        // initialize  the username EditText  instance
-        mUsernameEditText = (EditText)findViewById(R.id.usernameEditText);
+// initialize  the username EditText  instance
+mUsernameEditText = (EditText)findViewById(R.id.usernameEditText);
 
-        // initialize  the password  EditText instance
-        mPasswordEditText = (EditText)findViewById(R.id.passwordEditText);
+// initialize  the password  EditText instance
+mPasswordEditText = (EditText)findViewById(R.id.passwordEditText);
 
-        // initialize  the Button instance
-        mStoreButton = (Button) findViewById(R.id.storeButton);
+// initialize  the Button instance
+mStoreButton = (Button) findViewById(R.id.storeButton);
 
-        // initialize SharedPreferences
-        mSharedPreferences = getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
+// initialize SharedPreferences
+mSharedPreferences = getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
 
-        // setting  on click listener for the button
-        mStoreButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Store data
-                // enable start editing file
-                SharedPreferences.Editor editor = mSharedPreferences.edit();
-                // add user name
-                editor.putString(USERNAME, mUsernameEditText.getText().toString());
-                // add password
-                editor.putString(USER_PASSWORD, mPasswordEditText.getText().toString());
-                // store the update data
-                editor.commit();
-                //display message to inform the user that the stored
-                Toast.makeText(MainActivity.this,
-                			   "Your data has stored successfully!",
-                                Toast.LENGTH_LONG).show();
-            }
-        });
-    }
+// setting  on click listener for the button
+mStoreButton.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View view) {
+// Store data
+// enable start editing file
+SharedPreferences.Editor editor = mSharedPreferences.edit();
+// add user name
+editor.putString(USERNAME, mUsernameEditText.getText().toString());
+// add password
+editor.putString(USER_PASSWORD, mPasswordEditText.getText().toString());
+// store the update data
+editor.commit();
+//display message to inform the user that the stored
+Toast.makeText(MainActivity.this,
+"Your data has stored successfully!",
+Toast.LENGTH_LONG).show();
+}
+});
+}
 }
 
 ```
@@ -167,7 +167,7 @@ get the android sdk directory which can be found under Gradle Scripts -> local.p
 2. ./adb shell
 3. run-as your_package_name
 4. cd shared_prefs
-5. cat MyPrfLogin.xml
+5. cat MyPrefLogin.xml
 
 Once you have executed the commends above you will be able to read the data which you stored using the app as shown the following image.
 
@@ -198,72 +198,72 @@ Make sure to replace “your_package_name” in the first line with your package
 
 ```java
 
-  package your_package_name;
+package your_package_name;
 
-  import android.content.Context;
-  import android.content.SharedPreferences;
-  import android.support.v7.app.AppCompatActivity;
-  import android.os.Bundle;
-  import android.view.View;
-  import android.widget.Button;
-  import android.widget.EditText;
-  import android.widget.Toast;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-  public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-      public static final String MY_PREFERENCES = "MyPrefLogin" ;
-      public static final String USERNAME = "UsernameKey" ;
-      public static final String USER_PASSWORD = "PasswordKey" ;
-      SharedPreferences mSharedPreferences;
-      EditText mUsernameEditText, mPasswordEditText;
-      Button mStoreButton;
+public static final String MY_PREFERENCES = "MyPrefLogin" ;
+public static final String USERNAME = "UsernameKey" ;
+public static final String USER_PASSWORD = "PasswordKey" ;
+SharedPreferences mSharedPreferences;
+EditText mUsernameEditText, mPasswordEditText;
+Button mStoreButton;
 
-      @Override
-      protected void onCreate(Bundle savedInstanceState) {
-          super.onCreate(savedInstanceState);
-          setContentView(R.layout.activity_main);
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_main);
 
-          // initialize  the username EditText  instance
-          mUsernameEditText = (EditText)findViewById(R.id.usernameEditText);
+// initialize  the username EditText  instance
+mUsernameEditText = (EditText)findViewById(R.id.usernameEditText);
 
-          // initialize  the password  EditText instance
-          mPasswordEditText = (EditText)findViewById(R.id.passwordEditText);
+// initialize  the password  EditText instance
+mPasswordEditText = (EditText)findViewById(R.id.passwordEditText);
 
-          // initialize  the Button instance
-          mStoreButton = (Button) findViewById(R.id.storeButton);
+// initialize  the Button instance
+mStoreButton = (Button) findViewById(R.id.storeButton);
 
-          // initialize SharedPreferences
-          mSharedPreferences = getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
+// initialize SharedPreferences
+mSharedPreferences = getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
 
-          // setting  on click listener for the button
-          mStoreButton.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View view) {
-                  // Store data
-                  // enable start editing file
-                  SharedPreferences.Editor editor = mSharedPreferences.edit();
+// setting  on click listener for the button
+mStoreButton.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View view) {
+// Store data
+// enable start editing file
+SharedPreferences.Editor editor = mSharedPreferences.edit();
 ```
 ```diff
-                  // add user name
+// add user name
 -                 editor.putString(USERNAME, mUsernameEditText.getText().toString());
 +                 editor.putString(USERNAME, cipher(mUsernameEditText.getText().toString(),10));
-                  // add password
+// add password
 -                 editor.putString(USER_PASSWORD, mPasswordEditText.getText().toString());
 +                 editor.putString(USER_PASSWORD, cipher( mPasswordEditText.getText().toString(),10));
-                  // store the update data
+// store the update data
 ```
 ```java
-                  editor.commit();
-                  //display message to inform the user that the stored
-                  Toast.makeText(MainActivity.this,
-                  				"Your data has stored successfully!",
-                                Toast.LENGTH_LONG).show();
-              }
-          });
-      }
+editor.commit();
+//display message to inform the user that the stored
+Toast.makeText(MainActivity.this,
+"Your data has stored successfully!",
+Toast.LENGTH_LONG).show();
+}
+});
+}
 ```
 ```diff
-      // Cipher Method. Cipher encryption add shift for key
+// Cipher Method. Cipher encryption add shift for key
 +      String cipher(String msg, int shift){
 +          String s = "";
 +          int len = msg.length(); // get string length
@@ -273,7 +273,7 @@ Make sure to replace “your_package_name” in the first line with your package
 +          }
 +          return s;
 +      }
-  }
+}
 
 ```
 
@@ -292,7 +292,7 @@ get the android sdk directory which can be found under Gradle Scripts -> local.p
 2. ./adb shell
 3. run-as your_package_name
 4. cd shared_prefs
-5. cat MyPrfLogin.xml
+5. cat MyPrefLogin.xml
 
 This time you will notice that the data has encrypted and it’s no longer readable as shown in the image below.
 
