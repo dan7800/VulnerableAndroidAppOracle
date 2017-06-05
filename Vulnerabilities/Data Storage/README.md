@@ -159,7 +159,11 @@ public class MainActivity extends AppCompatActivity {
 
 To read the data which you just stored into the app, you first need to make sure that you still have the virtual device running. After that, open Terminal or Command Prompt and then execute the following commands:
 
-1. cd Library/Android/sdk/platform-tools/
+get the android sdk directory which can be found under Gradle Scripts -> local.properties as shown below
+
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image2.png" alt="Image">
+
+1. cd android-sdk-directory
 2. ./adb shell
 3. run-as your_package_name
 4. cd shared_prefs
@@ -280,7 +284,11 @@ Basically, this encryption technique considered to be one of the basic encryptio
 
 To read the app data again and make sure that they encrypt it, we first need to open Terminal or Command Prompt and execute the following commands:
 
-1. cd Library/Android/sdk/platform-tools/
+get the android sdk directory which can be found under Gradle Scripts -> local.properties as shown below
+
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image2.png" alt="Image">
+
+1. cd android-sdk-directory
 2. ./adb shell
 3. run-as your_package_name
 4. cd shared_prefs
