@@ -161,7 +161,7 @@ To read the data which you just stored into the app, you first need to make sure
 
 get the android sdk directory which can be found under Gradle Scripts -> local.properties as shown below
 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image2.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image10.png" alt="Image">
 
 1. cd android-sdk-directory
 2. ./adb shell
@@ -286,7 +286,7 @@ To read the app data again and make sure that they encrypt it, we first need to 
 
 get the android sdk directory which can be found under Gradle Scripts -> local.properties as shown below
 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image2.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image10.png" alt="Image">
 
 1. cd android-sdk-directory
 2. ./adb shell
