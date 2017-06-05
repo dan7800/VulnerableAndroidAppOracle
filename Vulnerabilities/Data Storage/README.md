@@ -165,7 +165,9 @@ get the android sdk directory which can be found under Gradle Scripts -> local.p
 
 1. cd android-sdk-directory
 2. ./adb shell
+[Note: On a Windows operating system the command is: adb shell]
 3. run-as your_package_name
+[Note: If you used the package name specified in the above code block, the command is: run-as com.example.sharedpreferencesexample]
 4. cd shared_prefs
 5. cat MyPrefLogin.xml
 
@@ -192,13 +194,13 @@ We are going to use the same app which we just built and then add an encryption 
 
 To start encrypting the data using Cipher you first need to add the cipher method to your source code and then you can call the Cipher method to encrypt the entered data before store it using SharedPreferences.
 
-your final source code should look like the following (the additional code and code modified is highlighted in green):
+your final source code should look like the following (remove the code highlighted in red and add the code highlighted in green):
 
-Make sure to replace “your_package_name” in the first line with your package name
+Make sure the package name, in the first line, is the same as what you provided in the earlier steps
 
 ```java
 
-package your_package_name;
+package com.example.sharedpreferencesexample;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -290,7 +292,9 @@ get the android sdk directory which can be found under Gradle Scripts -> local.p
 
 1. cd android-sdk-directory
 2. ./adb shell
+[Note: On a Windows operating system the command is: adb shell]
 3. run-as your_package_name
+[Note: If you used the package name specified in the above code block, the command is: run-as com.example.sharedpreferencesexample]
 4. cd shared_prefs
 5. cat MyPrefLogin.xml
 
