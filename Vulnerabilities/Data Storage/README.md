@@ -163,7 +163,7 @@ get the android sdk directory which can be found under Gradle Scripts -> local.p
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image10.png" alt="Image">
 
-1. cd android-sdk-directory
+1. cd android-sdk-directory  (might also need to switch to platform-tools)
 2. ./adb shell
 [Note: On a Windows operating system the command is: adb shell]
 3. run-as your_package_name
@@ -194,7 +194,7 @@ We are going to use the same app which we just built and then add an encryption 
 
 To start encrypting the data using Cipher you first need to add the cipher method to your source code and then you can call the Cipher method to encrypt the entered data before store it using SharedPreferences.
 
-your final source code should look like the following (remove the code highlighted in red and add the code highlighted in green):
+Your final source code (MainActivity.Java) should look like the following (remove the code highlighted in red and add the code highlighted in green):
 
 Make sure the package name, in the first line, is the same as what you provided in the earlier steps
 
@@ -290,7 +290,7 @@ get the android sdk directory which can be found under Gradle Scripts -> local.p
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image10.png" alt="Image">
 
-1. cd android-sdk-directory
+1. cd android-sdk-directory (might need to switch to platform-tools)
 2. ./adb shell
 [Note: On a Windows operating system the command is: adb shell]
 3. run-as your_package_name
