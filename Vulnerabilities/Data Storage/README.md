@@ -12,7 +12,7 @@ The important thing to know is that Android does not encrypt this data, therefor
 Therefore, we advise developers to not use these types of data storage when storing secure information such as username and password since this information can be readable by anyone.
 In this tutorial, we will build a simple Android app that allows users to store their usernames and passwords using SharedPreferences data storage, after that we will demonstrate how this data can be accessed and read.
 
-### Steps to Bild the App
+### Steps to Build the App
 
 1. Open Android Studio and create new Android project and name it “SharedPreferencesExample”. Make sure to save the package name somewhere on your computer since you will need it in a later stage of this tutorial. Click next.
 
