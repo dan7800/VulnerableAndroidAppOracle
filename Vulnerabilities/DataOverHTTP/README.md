@@ -2,20 +2,21 @@
 ### Background
 In Android, we use HTTP to exchange data between the client and the server. Sometimes, we send sensitive data, like username and password or user location from client to server over HTTP. Keep in mind that this request will move over the network. When this data is in transit, it is very easy for a hacker to intercept. Many people could interrupt and read this request data, so we must protect it.
 We will demonstrate an example of how to send sensitive data between client to server over HTTP. We will then explain how hackers could read this data, along with suggestions of how to protect against this.
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image1.png" alt="Image">
 
 
 ### Steps to build the app:
 1.	In Android Studio, create a new project, named “HTTPInsecure”. Take note of the package name, as we will be needing this later in the tutorial. Click next.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHttp/image1.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image2.png" alt="Image">
 
 On the next page, click next. The default API level will suffice for our needs right now.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHttp/image3.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image3.png" alt="Image">
 
 2.	Select project type “Empty Activity”.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHttp/image4.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image4.png" alt="Image">
 
 3.	 Our project will look like this when we are finished with the layout.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHttp/image5.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image5.png" alt="Image">
 To do this, we will update activity_main.xml with the code below. The activity_main.xml file can be found under “res/layout” in the folders in the panel to the left.
 Click the “Text” tab, found in the middle near the bottom of the window to see the text view of the XML file. By default, it shows you the Design view first, which is what’s currently visible in the picture above.
 ```xml
@@ -269,15 +270,15 @@ package="com.example.httpinsecure">
 
 ```
 See the image below to see how to start the virtual device and run the app. You may need to click “Create New Virtual Device” if you have nothing under your list of Available Virtual Devices.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHttp/image6.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image6.png" alt="Image">
 When the app comes up (which may take a while), enter username “Hussein” and password “abc”.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHttp/image7.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image7.png" alt="Image">
 
 ### How the data is vulnerable:
 When this data is in transit, it is very easy for a hacker to intercept and read the data. We will use Fiddler app to monitor traffic. Click link to install it. Follow the instructions given by the company that makes Fiddler in order to use it.
 
 When we run it, we see that the username and password is available.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHttp/image8.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image8.png" alt="Image">
 How do we protect our app data in transit, then?
 We should use HTTPS when sending data over the network.
 
