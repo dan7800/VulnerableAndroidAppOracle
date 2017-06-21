@@ -128,10 +128,10 @@ tools:context="com.example.httpinsecure.MainActivity">
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
-
-
 ```
+
 4. Next, update the MainActivity.java file with the code below. The MainActivity.java file can be found under the path “app/java/com.example.httpinsecure”.
+
 ```java
 package com.example.httpinsecure;
 
