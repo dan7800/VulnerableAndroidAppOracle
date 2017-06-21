@@ -49,45 +49,6 @@ The two samples we build as part of this walkthrough are examples of a vulnerabl
 
 </RelativeLayout>
 
-```
-### Steps to build the Receiver app (app B): 
-
-This app will receive the comment data and read it.
-
-1.	Create a new project with name “Receiver”. Save the package name, as usual.
-
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image3.png" alt="Image">
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image4.png" alt="Image">
-2.	Drag and drop a TextView from the “Palette” bar into the design view of activity_main.xml, found in “app/res/layout/”. Edit the properties of the TextView in the Properties panel that pops up when you click on it to be:
-•	ID: txtDisplay
-
-
-3.	Copy and paste the following code into MainActivity.java.
-
-```java
-package com.example.receiver;
-
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.TextView;
-
-public class MainActivity extends AppCompatActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        // Define the display Text view
-        TextView txtview = (TextView)findViewById(R.id.txtDisplay);
-
-        // get app the data sent on bundle
-        Bundle b = getIntent().getExtras();
-
-        // display the key that have the data
-        txtview.setText(b.getString("Comment"));
-    }
-}
-```
 6.	The highlighted lines represent properties text and id that specify the text that goes on the button and the Id that identifies those buttons on the activity. The Id is created and assigned here. We shall see how to use the Id when we write code for our Activity. However, the text that goes on the buttons shouldn’t be hard-coded in this file, but should be obtained from a different file that maintains all such strings. Add the following lines of code to the strings.xml file under res/values.
 
 ```xml
@@ -274,22 +235,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 The highlighted section shows you how we’re accessing the Buttons on our Activity by id. And how they’re used to start and stop the service.
 10.	Let’s test our service. Click on the run icon on the toolbar. You should have the emulator show up in a minute with the Activity and the start and stop service buttons.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image4.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image4.png" alt="Image">
 Click on the Start Service Button – a Toast should show up indicating the service has started running. Stopping the service will also show a similar toast.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image5.png" alt="Image">
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image6.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image5.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image6.png" alt="Image">
 Observe the Android Monitor and you should see the service running, displaying random numbers.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image7.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image7.png" alt="Image">
 
 Let’s build the client app that will bind to the service we just created and try and get data back from the service.
 ### Steps to build the Client app:
 
 1. Open Android Studio and create new Android project and name it “MyDangerousClientApp”. Make sure to save the package name somewhere on your computer since you will need it in a later stage of this tutorial. Click next.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image8.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image8.png" alt="Image">
 2. Set the Minimum SDK to API Level 15 or whatever your default is, and then click Next
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image9.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image9.png" alt="Image">
 3. Select Empty Activity, click on next and then finish to start the project
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image10.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image10.png" alt="Image">
 4.	Open activity_main.xml which you’ll find under app/res/layout. Delete the “Hello World” TextView. 
 5.	Let’s create an Activity that will allow the user to Bind to the service and Start the service. Add 2 Buttons to a Relative Layout just like we did for the service. We’ll also add a textView that will display the random number returned by the service to this app. We shall get to the details of these how we use these buttons in our activity later in the tutorial. The code below adds these 2 Buttons and the TextView to the layout.
 
@@ -528,10 +489,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 9.	Let’s test our dangerous app. We first start the service app like we did earlier in this tutorial.
 We then start the “dangerous” client app, bind to the service and run it.  Since our service is exported without any restrictions to enable access any app can do what our dangerous app does. Run the app. You should see the activity display the 2 buttons we added 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image11.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image11.png" alt="Image">
 Then bind to the service before getting a new random number. 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image12.png" alt="Image">
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image13.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image12.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image13.png" alt="Image">
 Let’s secure our service so that only an app that we’d like to give access to, could bind to our service. We can do these using intents. We add additional parameters to our explicit intent, that we use to bind to the service. On the service end, we check if have received the parameters we expect to find. This ensures that despite having the service’s android:exported attribute set to true, we do not expose our service to any other app that may construct an explicit intent.
 
 10.	Make the following changes to the onCreate() method of the MainActivity.java file in the Dangerous Client App. Alternately you could create a copy of the Client app and Service apps, and make changes to those apps.
@@ -571,9 +532,9 @@ public IBinder onBind(Intent intent) {
 ```
 
 On testing an app that tries binding to this service with just the explicit intent, this is what you shall see. Start the service that has the updated code in the onBind() method.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image14.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image14.png" alt="Image">
 Running the client app that has the explicit intent (without additional parameters). Trying to bind to the service will cause the service app to crash and throw an exception.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image15.png" alt="Image">
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image16.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image15.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image16.png" alt="Image">
 On adding the parameter to the intent in the Client app we should be able to bind to the service and start the service to receive data from the Math Service
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image17.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Services/image17.png" alt="Image">
