@@ -145,6 +145,7 @@ If the app template is Empty, it usually already has a “Hello, World” TextVi
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Intents/image10.png" alt="Image">
 4.	MainActivity.java should have this code in it:
+
 ```java
 package com.example.hackerapp;
 
@@ -177,8 +178,8 @@ public class MainActivity extends AppCompatActivity {
         txtDisplay.setText(dataBundle);
     }
 }
-
 ```
+
 ### To run the apps:
 1.	Run and build the HackerApp as described above. Again, the app will crash. This is because it is reliant upon receiving a data bundle from the Intent. In this situation, however, we are running the app ourselves. The bundle ends up being empty (more correctly known as Null), and will crash when we try to iterate over it.
 2.	After we’ve loaded HackerApp onto our device, we go back to the home screen and run Sender. Write any comment and click to send.
