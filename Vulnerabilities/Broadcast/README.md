@@ -309,10 +309,10 @@ To deliver a broadcast message to a specific recipient, use an explicit receiver
 ## <a name="hints"></a>Hints
 
 1- You can find the package name several different ways for example
-	<ol>
+	<ul>
     	<li>app > AndroidManifest.xml locate package in the manifest tag</li>
         <li>Gradle Scripts > build.gradle locate applicationId (~ line 7)</li>
-    </ol>
+    </ul>
     
 2- The android sdk path can be found in Gradle Scripts > local.properties. Then locate sdk.dir
 
