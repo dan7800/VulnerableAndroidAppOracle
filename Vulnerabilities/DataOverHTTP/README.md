@@ -275,10 +275,19 @@ When the app comes up (which may take a while), enter username “Hussein” and
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image7.png" alt="Image">
 
 ### How the data is vulnerable:
-When this data is in transit, it is very easy for a hacker to intercept and read the data. We will use Fiddler app to monitor traffic. Click link to install it. Follow the instructions given by the company that makes Fiddler in order to use it.
+When this data is in transit, it is very easy for a hacker to intercept and read the data.
 
-When we run it, we see that the username and password is available.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image8.png" alt="Image">
+We will use WireShark app to monitor traffic. Go to https://www.wireshark.org/ to download and install it. Follow the installation wizard. 
+
+Change the android device proxy to your IP address. To do so, in your Android device go to Settings->Cellur Networks->Access Point Names->Select the APN->Change Proxy to your device IPv4 
+address and PORT to 8888. Save the changes.
+To get your IP address, start your terminal and type IPCONFIG.
+
+
+Run WireShark application and select your internet mode and look for your IPv4 address and corresponding info, we see that the username and password is available.
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image29.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image30.png" alt="Image">
+
 How do we protect our app data in transit, then?
 We should use HTTPS when sending data over the network.
 
@@ -380,4 +389,3 @@ Resources
 For more information, consult these links:
 i.	HttpURLConnection Android API Reference
 ii.	Security with HTTPS and SSL
-
