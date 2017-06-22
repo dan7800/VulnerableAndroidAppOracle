@@ -42,7 +42,12 @@ Open new file names News.html
 ```
 
 
-The website should look like this. Then you can use any local webserver to serve the file or
+The website should look like this
+
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image2.png" alt="Image">
+
+Then you can use any local webserver to serve the file.
+
 If you do not want to test it with a local server you can browse this url https://goo.gl/TIGDOb .   
 
 
@@ -52,7 +57,11 @@ If you do not want to test it with a local server you can browse this url https:
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image3.png" alt="Image">
 
-You may then follow use all default settings when creating the project including API 23 and creating a Empty Activity
+2. Make sure Minimum SDK is Marshmallow or newer
+
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image4.png" alt="Image">
+
+3. You may then follow use all default settings when creating the project and create an Empty Activity
 
 2. Paste the following code to res/layout/activity_main.xml
 
@@ -124,7 +133,7 @@ You may then follow use all default settings when creating the project including
 
 The result should look like this
 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image4.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image5.png" alt="Image">
 
 
 3. Add permission in app/manifests/AndroidManinfest.xml file to access to network and user phone number
@@ -145,8 +154,8 @@ Your manifest file will now look like: (be sure to retain your package name)
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="***YOUR PACKAGE NAME">
-    
-    
+
+
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <application
@@ -307,11 +316,11 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-You may now build the app to view the page content. Note: Starting the emulator may take some time depending on the speed of your machine. 
+You may now build the app to view the page content. Note: Starting the emulator may take some time depending on the speed of your machine.
 
 View the page content
 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image5.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image6.png" alt="Image">
 
 ### Steps to build the hacker app
 
@@ -319,17 +328,17 @@ Another website can embed the same permissions included in your website’s scri
 
 1. A hacker could inspect your website’s code and see that you are using Android function in your script
 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image6.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image7.png" alt="Image">
 
 2. Hacker will insert same JavaScript in his website. When your users view this website, he will get user’s personal information through your app’s permissions
 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image7.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image8.png" alt="Image">
 
 ### Example of the user view hacker website, and the hacker get his phone number
 
 If you do not want to run local server you can use this url https://bitly.com/2sfdX0v as the hacker url.
 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image8.png" alt="Image">
+<img style="margin:9px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image9.png" alt="Image">
 
 ### Fix This Problem
 
