@@ -52,8 +52,9 @@ If you do not want to test it with a local server you can browse this url https:
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image3.png" alt="Image">
 
+You may then follow use all default settings when creating the project including API 23 and creating a Empty Activity
 
-2. Paste the following code to activity_main.xml
+2. Paste the following code to res/layout/activity_main.xml
 
 ```xml
 
@@ -135,6 +136,18 @@ The result should look like this
 
 
 ```
+
+
+Your manifest file will now look like
+
+```xml
+
+
+
+```
+
+
+
 
 4. The code will be like this code
 
