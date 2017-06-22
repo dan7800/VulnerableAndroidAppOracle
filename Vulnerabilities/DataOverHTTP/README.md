@@ -4,7 +4,6 @@ In Android, we use HTTP to exchange data between the client and the server. Some
 We will demonstrate an example of how to send sensitive data between client to server over HTTP. We will then explain how hackers could read this data, along with suggestions of how to protect against this.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image1.png" alt="Image">
 
-
 ### Steps to build the app:
 1.	In Android Studio, create a new project, named “HTTPInsecure”. Take note of the package name, as we will be needing this later in the tutorial. Click next.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image2.png" alt="Image">
