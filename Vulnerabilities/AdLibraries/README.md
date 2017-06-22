@@ -27,11 +27,11 @@ I	Add new model with type Android Library
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image4.png" alt="Image">
 
-II	Add new class named “adsVal”. This class will display ads message, and in background it will read user messages and user contact info
+II	Add new class named “AdsAul”. This class will display ads message, and in background it will read user messages and user contact info
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image5.png" alt="Image">
 
-III	Add this code in AdsVal class
+III	Add this code in AdsAul class
 ```java
 package com.example.hussienalrubaye.adslibrary;
 
