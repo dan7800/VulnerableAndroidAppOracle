@@ -340,7 +340,7 @@ Make sure that the imported package name is correct
 When the app Runs and click “Load messages”. Inbox messages will be loaded then adds will display.
 ### NOTE: Use Android API less than 23. If you get error stating minSDK != currentSDK, change minSDK to 22 in Gradle Scripts-> build.gradle(Module app) and build.gradle(Module AdsLibrary).
 
-  <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image14.png" alt="Image">
+  <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image14.PNG" alt="Image">
 
   <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image15.png" alt="Image">
 
