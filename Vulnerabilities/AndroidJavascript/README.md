@@ -131,7 +131,7 @@ The result should look like this
 
 ```xml
 
-<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
 
@@ -144,12 +144,16 @@ Your manifest file will now look like: (be sure to retain your package name)
 
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="rit.test.com.aj3">
-
+    package="***YOUR PACKAGE NAME">
+    
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -159,13 +163,7 @@ Your manifest file will now look like: (be sure to retain your package name)
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-
     </application>
-
-</manifest>
 
 ```
 
