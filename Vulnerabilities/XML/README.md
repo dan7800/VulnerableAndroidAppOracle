@@ -16,7 +16,7 @@ We will demonstrate how to build an Android app that displays Google Maps with t
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/image2.png" alt="Image">
 
-3.	See the app files under “app/res/values/”. One of them is strings.xml file. It has a key named “google_maps_key”. We must create the Google Maps key for this app from the Google developer console by following the instructions in this file. After the key is created, replace the placeholder “YOUR_KEY_HERE” with the generated key in quote marks.  
+3.	See the app files under “app/res/values/”. One of them is google_maps_api.xml file. It has a key named “google_maps_key”. We must create the Google Maps key for this app from the Google developer console by following the instructions in this file. After the key is created, replace the placeholder “YOUR_KEY_HERE” with the generated key in quote marks.  
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/image3.png" alt="Image">
 
