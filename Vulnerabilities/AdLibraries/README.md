@@ -108,9 +108,9 @@ public void onClick(DialogInterface dialog, int which) {
 
 
 4-	In App Manifest add permission to read user SMS
-
+```xml
 <uses-permission   android:name="android.permission.READ_SMS"></uses-permission>
-
+```
 5-	In onCreate event connect with the textView to display messages in the textview UI
 ```java
 TextView txtDisplay ;
