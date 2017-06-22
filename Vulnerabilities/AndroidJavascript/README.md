@@ -25,6 +25,36 @@ The output should look like the image below
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image3.png" alt="Image">
 
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News </title>
+</head>
+<body>
+<h1> Best Bird for weekend</h1>
+<img src="bird.jpg" width="200" hight="200">
+<p>This app is getting the phone number of any phone browser it using related app and display the phone number bellow</p>
+
+<br/>
+<p id="phone"> </p>
+<script type="text/javascript">
+// functions call to get user phone number
+    function GetPhoneNumber() {
+ // gettting user phone number from android device
+    var PhoneNumber= Android.GetPhoneNumber();
+    document.getElementById("phone").innerHTML="Phone is "+ PhoneNumber;
+    }
+    //call get phone number
+    GetPhoneNumber();
+</script>
+
+</body>
+</html>
+```
+
 2. Paste the following code to activity_main.xml
 
 ```xml
