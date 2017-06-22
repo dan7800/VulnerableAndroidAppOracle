@@ -11,12 +11,6 @@ We will build an app that sends sensitive data like the user’s phone number to
 
 Open new file names News.html
 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image1.png" alt="Image">
-
-The website should look like this. Then you can use any local webserver to serve the file or
-If you do not want to test it with a local server you can browse this url https://goo.gl/TIGDOb .   
-The output should look like the image below
-
 ```html
 
 <!DOCTYPE html>
@@ -46,6 +40,11 @@ The output should look like the image below
 </body>
 </html>
 ```
+
+
+The website should look like this. Then you can use any local webserver to serve the file or
+If you do not want to test it with a local server you can browse this url https://goo.gl/TIGDOb .   
+
 
 ### Steps to build the News View App
 
