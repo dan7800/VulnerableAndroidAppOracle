@@ -1,6 +1,4 @@
 # Broadcast
-
-## Outline
 [Background](#background)  
 [Activity Instructions](#activity_instructions)   
 [Exploitation Instructions](#exploitation_instructions)  
