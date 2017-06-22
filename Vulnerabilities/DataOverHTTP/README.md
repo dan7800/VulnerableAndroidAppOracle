@@ -19,6 +19,7 @@ On the next page, click next. The default API level will suffice for our needs r
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image5.png" alt="Image">
 To do this, we will update activity_main.xml with the code below. The activity_main.xml file can be found under “res/layout” in the folders in the panel to the left.
 Click the “Text” tab, found in the middle near the bottom of the window to see the text view of the XML file. By default, it shows you the Design view first, which is what’s currently visible in the picture above.
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -130,10 +131,10 @@ tools:context="com.example.httpinsecure.MainActivity">
 </RelativeLayout>
 ```
 
-4. Next, update the MainActivity.java file with the code below. The MainActivity.java file can be found under the path “app/java/com.example.httpinsecure”.
+4. Next, update the MainActivity.java file with the code below. The MainActivity.java file can be found under the path “app/java/com.example.httpinsecure”.  (Be sure to update your package name)
 
 ```java
-package com.example.httpinsecure;
+package xxxxxx;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.AsyncTask;
