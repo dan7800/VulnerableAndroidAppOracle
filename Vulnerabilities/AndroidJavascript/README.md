@@ -127,7 +127,7 @@ The result should look like this
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image4.png" alt="Image">
 
 
-3. Add permission in AndroidManinfest.xml files to access to network and user phone number
+3. Add permission in app/manifests/AndroidManinfest.xml file to access to network and user phone number
 
 ```xml
 
@@ -142,16 +142,56 @@ Your manifest file will now look like
 
 ```xml
 
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="rit.test.com.androidjavascript2">
 
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+        
+    </application>
+
+</manifest>
 
 ```
 
 
 
 
-4. The code will be like this code
+4. Paste the following code into your java/MainActivity.java file. Be sure to retain your selected package name at the top of the document.
 
 ```java
+package xxxxxxxx;
+
+import android.Manifest;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.telephony.TelephonyManager;
+import android.view.View;
+import android.webkit.JavascriptInterface;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.EditText;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText etURL; //navigation url
@@ -267,27 +307,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
 ```
 
-Add the following imports to the file, below the package declaration.
+You may now build the app to view the page content.
 
-```java
-import android.Manifest;
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.telephony.TelephonyManager;
-import android.view.View;
-import android.webkit.JavascriptInterface;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.EditText;
-```
 View the page content
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image5.png" alt="Image">
