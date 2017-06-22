@@ -478,4 +478,4 @@ public class MainActivity extends AppCompatActivity {
 ```
 As we see our website could access to phone number while hacker website cannot.
 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image9.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image10.png" alt="Image">
