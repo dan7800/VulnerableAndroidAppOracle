@@ -17,14 +17,6 @@ The website should look like this. Then you can use any local webserver to serve
 If you do not want to test it with a local server you can browse this url https://goo.gl/TIGDOb .   
 The output should look like the image below
 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image2.png" alt="Image">
-
-### Steps to build the News View App
-
-1. Open new project with name “AndroidJavaScript”, save the package name will will need next
-
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image3.png" alt="Image">
-
 ```html
 
 <!DOCTYPE html>
@@ -54,6 +46,13 @@ The output should look like the image below
 </body>
 </html>
 ```
+
+### Steps to build the News View App
+
+1. Open new project with name “AndroidJavaScript”, save the package name will will need next
+
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image3.png" alt="Image">
+
 
 2. Paste the following code to activity_main.xml
 
