@@ -138,13 +138,13 @@ The result should look like this
 ```
 
 
-Your manifest file will now look like
+Your manifest file will now look like: (be sure to retain your package name)
 
 ```xml
 
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="rit.test.com.androidjavascript2">
+    package="rit.test.com.aj3">
 
     <application
         android:allowBackup="true"
@@ -162,7 +162,7 @@ Your manifest file will now look like
 
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-        
+
     </application>
 
 </manifest>
@@ -309,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-You may now build the app to view the page content.
+You may now build the app to view the page content. Note: Starting the emulator may take some time depending on the speed of your machine. 
 
 View the page content
 
