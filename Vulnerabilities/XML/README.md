@@ -20,7 +20,7 @@ We will demonstrate how to build an Android app that displays Google Maps with t
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/image10.png" alt="Image">
 
-This file has a key named “google_maps_key”. We must create the Google Maps key for this app from the Google developer console by following the instructions in this file. 
+This file has a key named “google_maps_key”. We must create the Google Maps key for this app from the Google developer console by following the instructions in this [file] (GenerateKey.md). 
 After obtaining the key, replace the placeholder text “YOUR_KEY_HERE” with the generated key.  
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/image3.png" alt="Image">
