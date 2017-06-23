@@ -4,7 +4,7 @@ Follow the below steps to generate a Google Maps API Key.
 
 1. Navigate to the <a href="https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&reusekey=true" target="_blank">Google API Console</a>
 
-2.Select "Create a project" and click "Continue"
+2. Select "Create a project" and click "Continue"
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/gmap_key_01.png" alt="Image">
 
@@ -20,3 +20,7 @@ This process will take a few minutes.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/gmap_key_03.png" alt="Image">
 
 This process will take a few minutes. After this process is completed, the generated API key will be shown.
+
+### NOTE
+If the above instruction do not work. You can follow the most up-to-date set of instructions here: https://developers.google.com/maps/documentation/javascript/get-api-key
+
