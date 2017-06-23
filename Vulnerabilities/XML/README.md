@@ -43,12 +43,15 @@ Perform the following steps to locate and copy the generated APK file from the d
 2. CD to the location of the Android SDK installed on your development machine.
 
 	The default location on Mac OS is: cd ~/Library/Android/sdk/platform-tools
+	
 	The default location on Windows is: C:\Users\YOUR_USERNAME_HERE\AppData\Local\Android\sdk\platform-tools
 
 3. Run the following command to retrieve the location of the APK file on the emulator:
 
 	./adb shell pm path YOUR_PACKAGE_NAME_GOES_HERE
+	
 	Note: Replace the text "YOUR_PACKAGE_NAME_GOES_HERE" with the actual package name you specified when creating the project
+	
 	If you cannot rember the package name, refer to the AndroidManifest.xml OR run the following command:./adb shell pm list packages
 	
 	The output will look like: package:/data/app/com.example.someapp.apk 
@@ -57,12 +60,15 @@ Perform the following steps to locate and copy the generated APK file from the d
 4.	Run the following command to copy the APK file to your development machine:
 	
 	./adb pull /data/app/com.example.someapp.apk /PATH/TO/DESTINATION/GOES/HERE
+	
 	Note: Replace the text "/PATH/TO/DESTINATION/GOES/HERE" with the path to where the APK should be copied to
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/image6.png" alt="Image">
 
 5.	Reverse engineer the APK file by either:
+
 	a)	Rename the “base.apk” file to “base.zip”, and extract the file
+	
 	b)	Use a tool like: http://ibotpeaches.github.io/Apktool/ follow the instructions to install and run it
 	
 6. After reverse engineering the APK file, open the "strings.xml" file located at: \base\res\values in the extracted location. (Note: depending on your settings, the file "google_maps_api.xml" will be copied into the APK and you would not need to open the "strings.xml" file)
