@@ -140,7 +140,7 @@ public class AdsAul {
 <ol type="i">
   <li>File -> Project Structure</li>
   <li>under "Modules" select the project name(app) -> Dependencies</li>
-  <li>library(+) -> Library Dependency -> add the "AdsLibrary"</li>
+  <li>library(+) -> Module Dependency -> add the "AdsLibrary"</li>
 </ol>
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image11.png" alt="Image">
