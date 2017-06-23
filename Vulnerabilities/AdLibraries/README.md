@@ -27,8 +27,7 @@ We have demonstrated an example to explain how an Ads company gets access to a u
 
 We will build a simple Ads library display message that reads, “Wonderful coffee apps for free” while trying to have it read user messages and user contact info in background.
 
-Follow the following steps to create a new module
-
+Follow the following steps to create a new module. Go to File-> New->New Module, then select "Phone and Tablet Module" and name it "Ads Library". 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image7.png" alt="Image">
 
 Click Finish. Now you should see the new module added to the file tree
@@ -347,11 +346,12 @@ When the app Runs and click “Load messages”. Inbox messages will be loaded t
   <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image16.png" alt="Image">
 
 
-At the same time, we see the ads read user messages, the read box show how ads also read user messages
+At the same time, we see the ads read user messages, the read box show how ads also read user messages.
+Go to Android Monitor console from bottom of Android Studio window and check the logcat there.  
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image17.png" alt="Image">
 
-we see green box That explain Ads cannot read contact because permission isn’t granted by user, if the developer adds contact permission in Manifest, For Android API<23 the ads will read all his contact info even it the user does not grant permission or the developer did not use it
+The text in the green box explains that Ads cannot read contact because permission isn’t granted by user, if the developer adds contact permission in Manifest, For Android API<23 the ads will read all his contact info even it the user does not grant permission or the developer did not use it
 ```xml
 <uses-permission android:name="android.permission.READ_CONTACTS" />
 ```
