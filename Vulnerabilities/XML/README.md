@@ -50,9 +50,7 @@ Perform the following steps to locate and copy the generated APK file from the d
 
 	./adb shell pm path YOUR_PACKAGE_NAME_GOES_HERE
 	
-	Note: Replace the text "YOUR_PACKAGE_NAME_GOES_HERE" with the actual package name you specified when creating the project
-	
-	If you cannot rember the package name, refer to the AndroidManifest.xml OR run the following command:./adb shell pm list packages
+	Note: Replace the text "YOUR_PACKAGE_NAME_GOES_HERE" with the actual package name you specified when creating the project. If you cannot rember the package name, refer to the AndroidManifest.xml OR run the following command:./adb shell pm list packages
 	
 	The output will look like: package:/data/app/com.example.someapp.apk 
 	We want the part that comes after “package:”
