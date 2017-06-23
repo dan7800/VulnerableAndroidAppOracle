@@ -23,10 +23,10 @@ iii.	Build another app to intercept the broadcast message.
 iv.	Show how to protect the content of the broadcast messages from attackers.
 
 #### 1.	Project Creation
-a.	Follow the screens below to create a new project:
+a.	Follow the screens below to create a new project. Name the project “AndroidBroadcast”. Take note of the package name here, under the first two lines.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image1.png" alt="Image">
 
-Name the project “AndroidBroadcast”. Take note of the package name here, under the first two lines. This app will send the username every 50000ms in a system broadcast. This app will also have a Broadcast class to receive the message and display the data in a message.
+ This app will send the username every 50000ms in a system broadcast. This app will also have a Broadcast class to receive the message and display the data in a message.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image2.png" alt="Image">
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image3.png" alt="Image">
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image4.png" alt="Image">
@@ -222,9 +222,12 @@ We will see how this could be misused here.
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image5.png" alt="Image">
 
-2.	We will build a malicious app to intercept the messages that are broadcast. Any attacker could reverse engineer an app, read the manifest file, and build an app to intercept the broadcast actions the original app was receiving.
+2.	We will build a malicious app to intercept the messages those are broadcasting. Any attacker could reverse engineer an app, read the manifest file, and build an app to intercept the broadcast actions the original app was receiving.
+
 i.	Create a new app. Name it “AndroidBroadcastAttack”.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image6.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image50.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image51.png" alt="Image">
 
 ii. Create a new notification class called **NewMessageNotification**, using File > New > UI Component > Notification. use default options to create the class.
 
@@ -270,7 +273,7 @@ vi.	Insert the following into the manifest file of the malicious app, found unde
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="your_package_name">
+package="****YOUR_PACKAGE_NAME****">
 
     <uses-permission android:name="android.permission.VIBRATE" />
     
@@ -299,6 +302,8 @@ package="your_package_name">
 
 </manifest>
 ```
+
+Now run the app. You will find the previous broadcast message on the screen.
     
 ## <a name="defense"></a>Defense
 

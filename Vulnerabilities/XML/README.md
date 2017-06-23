@@ -12,7 +12,7 @@ We will demonstrate how to build an Android app that displays Google Maps with t
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/image1.png" alt="Image">
 
-2.	Select project of type Google Maps Activity.
+2.	Select project of type Google Maps Activity. You can keep the default activity name. 
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/image2.png" alt="Image">
 

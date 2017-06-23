@@ -337,25 +337,42 @@ Another website can embed the same permissions included in your website’s scri
 
 ### Example of the user view hacker website, and the hacker get his phone number
 
-If you do not want to run local server you can use this url https://bitly.com/2sfdX0v as the hacker url.
+If you do not want to run local server you can use this url https://bitly.com/2sfdX0v  (0->zero) as the hacker url. 
+NOTE: If you want to see hacker website code, open this url https://bitly.com/2sfdX0v on a browser and right click on the page-> view page source to view code.
 
 <img style="margin:9px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image9.png" alt="Image">
 
 ### Fix This Problem
 
-To fix this problem, we must send sensitive data only to the websites that we wish to authorize to access this data like our websites, or we could enable JavaScript to be run only in our website. The code below allows for sending sensitive data only to the websites that we authorize. Change the hotingURL if you are using a local server.
+To fix this problem, we must send sensitive data only to the websites that we wish to authorize to access this data like our websites, or we could enable JavaScript to be run only in our website. The code below allows for sending sensitive data only to the websites that we authorize. Open MainActivity.java, remove the previous code except package name(first line) and paste the below code.
 
 ```java
+package ***YOUR PACKAGE NAME***
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.Manifest;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.telephony.TelephonyManager;
+import android.view.View;
+import android.webkit.JavascriptInterface;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.EditText;
+
 public class MainActivity extends AppCompatActivity {
 
+    //get access to mailbox
     EditText etURL; //navigation url
     WebView browser; // web browser
-```
-```diff
-+   // host name
-+   String HostingURL = "https://goo.gl/TIGDOb";
-```
-```java
+    String HostingURL = "https://goo.gl/TIGDOb";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -422,12 +439,12 @@ public class MainActivity extends AppCompatActivity {
         @JavascriptInterface   // must be added for API 17 or higher
         public String GetPhoneNumber() {
 
-+           // only send the phone to authorize website
-+           if(etURL.getText().toString().indexOf(HostingURL)==0)
+                     // only send the phone to authorize website
+                             if(etURL.getText().toString().indexOf(HostingURL)==0)
                 return GetUserPhoneNumber();
 
-+           else
-+               return  null;
+                      else
+                         return  null;
 
         }
 
@@ -473,7 +490,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
 ```
 As we see our website could access to phone number while hacker website cannot.
 
