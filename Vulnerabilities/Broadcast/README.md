@@ -25,8 +25,6 @@ iv.	Show how to protect the content of the broadcast messages from attackers.
 #### 1.	Project Creation
 a.	Follow the screens below to create a new project. Name the project “AndroidBroadcast”. Take note of the package name here, under the first two lines.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image1.png" alt="Image">
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image50.png" alt="Image">
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image51.png" alt="Image">
 
  This app will send the username every 50000ms in a system broadcast. This app will also have a Broadcast class to receive the message and display the data in a message.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Broadcast/image2.png" alt="Image">
