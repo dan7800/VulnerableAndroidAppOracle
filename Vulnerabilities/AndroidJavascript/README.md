@@ -421,8 +421,7 @@ public class MainActivity extends AppCompatActivity {
         //This method return user phone number to the javascript calls from website
         @JavascriptInterface   // must be added for API 17 or higher
         public String GetPhoneNumber() {
-```
-```diff
+
 +           // only send the phone to authorize website
 +           if(etURL.getText().toString().indexOf(HostingURL)==0)
                 return GetUserPhoneNumber();
