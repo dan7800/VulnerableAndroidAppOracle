@@ -173,6 +173,7 @@ Your manifest file will now look like: (be sure to retain your package name)
             </intent-filter>
         </activity>
     </application>
+    </mainfest>
 
 ```
 
