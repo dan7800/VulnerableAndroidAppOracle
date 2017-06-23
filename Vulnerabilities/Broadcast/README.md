@@ -302,6 +302,8 @@ package="****YOUR_PACKAGE_NAME****">
 
 </manifest>
 ```
+
+Now run the app. You will find the previous broadcast message on the screen.
     
 ## <a name="defense"></a>Defense
 
