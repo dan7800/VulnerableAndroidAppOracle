@@ -30,9 +30,8 @@ We will build a simple Ads library display message that reads, “Wonderful coff
 Follow the following steps to create a new module. Go to File-> New->New Module, then select "Phone and Tablet Module" and name it "Ads Library". 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image55.png" alt="Image">
 
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image7.png" alt="Image">
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image56.png" alt="Image">
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image57.png" alt="Image">
+
 
 Click Finish. Now you should see the new module added to the file tree
 
