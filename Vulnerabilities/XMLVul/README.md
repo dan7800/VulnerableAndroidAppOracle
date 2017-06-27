@@ -56,12 +56,18 @@ We have the app package, called “base.apk” here.
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/image6.png" alt="Image">
 
-### Reverse engineer the APK file by using apktool.
 
-Download apktool from http://ibotpeaches.github.io/Apktool/ follow the instructions to install and run it.
+### Reverse Engineering APK file using apktool
 
+1. Download apktool from http://ibotpeaches.github.io/Apktool/
 
-After reverse engineering the APK file, open the "strings.xml" file located at: \base\res\values in the extracted location.
+2. Follow these installation instructions https://ibotpeaches.github.io/Apktool/install/ 
+
+3. Then run apktool command from command line intereface(cmd/powershell/cli) as
+    apktool d base.apk 
+    
+4. Files will be extracted in the same directory. Look for newly created directory(named after apk file) and go to 
+res->values->strings.xml
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XMLVul/image6.png" alt="Image">
 
