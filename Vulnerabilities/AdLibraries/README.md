@@ -27,7 +27,7 @@ We have demonstrated an example to explain how an Ads company gets access to a u
 
 We will build a simple Ads library display message that reads, “Wonderful coffee apps for free” while trying to have it read user messages and user contact info in background.
 
-Follow the following steps to create a new module. Go to File-> New->New Module, then select "Phone and Tablet Module" and name it "Ads Library". 
+Follow the following steps to create a new module. Go to File-> New->New Module, then select "Android Library" and name it "Ads Library". 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image55.png" alt="Image">
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image56.png" alt="Image">
