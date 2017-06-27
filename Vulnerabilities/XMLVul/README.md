@@ -30,6 +30,8 @@ We will demonstrate how to build an Android app that displays Google Maps with t
 
 Perform the following steps to locate and copy the generated APK file from the device emulator to your development machine.
 
+Minimize the android emulator. Donot close the emulator or the app.
+
 Open Terminal or Command Prompt
 
 CD to the location of the Android SDK installed on your development machine.
