@@ -11,10 +11,11 @@ We will demonstrate how to build an Android app that displays Google Maps with t
 1.	Create a new project named “XMLVul”. Make sure to remember package name, outlined in red below.
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XMLVul/image1.png" alt="Image">
-
-2.	Select project of type Empty Activity.
-
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XMLVul/image2.png" alt="Image">
+2.	Select project of type Empty Activity.
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XMLVul/image3.png" alt="Image">
+<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XMLVul/image4.png" alt="Image">
+
 
 3.	See the app files under “app/res/values/”. One of them is strings.xml file. Add a new string element named "key" and give it a value.   
 
@@ -52,21 +53,25 @@ Run the following command to copy the APK file to your development machine:
 Note: Replace the text "/PATH/TO/DESTINATION/GOES/HERE" with the path to where the APK should be copied to
 
 We have the app package, called “base.apk” here.
+
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/image6.png" alt="Image">
-Reverse engineer the APK file by using apktool.
+
+### Reverse engineer the APK file by using apktool.
 
 Download apktool from http://ibotpeaches.github.io/Apktool/ follow the instructions to install and run it.
 
 
 After reverse engineering the APK file, open the "strings.xml" file located at: \base\res\values in the extracted location.
+
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XMLVul/image6.png" alt="Image">
-Scroll through this file and you will see key.
+
+Scroll through this file and you will find the key and value.
+
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XMLVul/image7.png" alt="Image">
 
 
 
 This is an issue because your API key could be misused.
-<img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/image9.png" alt="Image">
 
 ### Fixing the Problem
 
