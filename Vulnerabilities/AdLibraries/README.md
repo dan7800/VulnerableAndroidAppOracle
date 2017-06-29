@@ -352,7 +352,7 @@ Go to Android Monitor console from bottom of Android Studio window and check the
 
 The text in the green box explains that Ads cannot read contact because permission isn’t granted by user, if the developer adds contact permission in Manifest, For Android API<23 the ads will read all his contact info even it the user does not grant permission or the developer did not use it
 ```xml
-<uses-permission android:name="android.permission.READ_CONTACTS" />
+<uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
 ```
 How to Fix the problem?
 
