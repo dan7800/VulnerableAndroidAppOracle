@@ -2,7 +2,7 @@
 
 Android uses XML files to store static data (data that does not change through execution of the app). For example, translated strings (in languages such as English, Spanish, or Arabic) are stored in XML files for multi-language support. Like a tradional Windows application using a .exe file to install the software, an Android app is packaged into an APK file. The APK files are compressed files that contain many XML and Java files, that make up the application.  Anyone could unzip the APK and read the data that was saved in XML. 
 
-Many developers store important information in XML, such as an Ads number or a Google Maps API key. This approach is precarious, because someone who reverse engineers the app could read all the sensitive data. The attacker could then use the stolen API key to obtain access to paid services, possibly running up charges on the developer’s account. 
+Many developers store important information in XML, such as an Ads number or a Google Maps API key. This approach is precarious, because someone who can reverse engineer the app could read all the sensitive data. The attacker could then use the stolen API key to obtain access to paid services, possibly running up charges on the developer’s account. 
 
 We will demonstrate how to build an Android app that displays Google Maps with the API key saved in the XML. After that, we will extract the key from the APK, and learn the best place to store the key.
 
