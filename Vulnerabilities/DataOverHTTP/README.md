@@ -1,6 +1,6 @@
 # Secure HTTP Requests
 ### Background
-In Android, we use HTTP to exchange data between the client and the server. Sometimes, we send sensitive data, like username and password or user location from client to server over HTTP. Keep in mind that this request will move over the network. When this data is in transit, it is very easy for a hacker to intercept. Many people could interrupt and read this request data, so we must protect it.
+In Android, we use HTTP (HyperText Transfer Protocol) to exchange data between the client and the server. Sometimes, we send sensitive data, like username and password or user location from client to server over HTTP. Keep in mind that this request will move over the network. When this data is in transit, it is very easy for a hacker to intercept. Many people could interrupt and read this request data, so we must protect it.
 We will demonstrate an example of how to send sensitive data between client to server over HTTP. We will then explain how hackers could read this data, along with suggestions of how to protect against this.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image1.png" alt="Image">
 
@@ -17,7 +17,7 @@ On the next page, click next. The default API level will suffice for our needs r
 3.	 Our project will look like this when we are finished with the layout.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image5.png" alt="Image">
 To do this, we will update activity_main.xml with the code below. The activity_main.xml file can be found under “res/layout” in the folders in the panel to the left.
-Click the “Text” tab, found in the middle near the bottom of the window to see the text view of the XML file. By default, it shows you the Design view first, which is what’s currently visible in the picture above.
+Click the “Text” tab, found at the bottom of the window next to Design view to see the text view of the XML file. By default, it shows you the Design view first, which is what’s currently visible in the picture above.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -275,9 +275,9 @@ When this data is in transit, it is very easy for a hacker to intercept and read
 
 We will use WireShark app to monitor traffic. Go to https://www.wireshark.org/ to download and install it. Follow the installation wizard. 
 
-Change the android device proxy to your IP address. To do so, in your Android device go to Settings->Cellur Networks->Access Point Names->Select the APN->Change Proxy to your device IPv4 
+Change the android device proxy to your IP address. To do so, in your Android device go to Settings->Cellular Networks->Access Point Names->Select the APN->Change Proxy to your device IPv4 
 address and PORT to 8888. Save the changes.
-To get your IP address, start your terminal and type IPCONFIG.
+To get your IP address, start your terminal/command prompt and type IPCONFIG.
 
 
 Run WireShark application and select your internet mode and look for your IPv4 address and corresponding info, we see that the username and password is available.
@@ -285,7 +285,7 @@ Run WireShark application and select your internet mode and look for your IPv4 a
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image30.png" alt="Image">
 
 How do we protect our app data in transit, then?
-We should use HTTPS when sending data over the network.
+We should use HTTPS (HyperText Transfer Protocol Secure) when sending data over the network.
 
 In order to use HTTPS, all we need to do is call openConnection() on a URL with “https” in front of it, then cast the resulting connection to HttpsURLConnection.
 
@@ -319,7 +319,7 @@ public void buloginckic(View view) {
 
 
 ```
-6- Add class named “MainActivity.java”
+6- Add a class named “MainActivity.java”
 ```java
 public class MainActivity extends AppCompatActivity {
 TextView textView1;
@@ -366,7 +366,7 @@ data+=(c.getString(c.getColumnIndex( _ID)) +", " +  c.getString(c.getColumnIndex
 ```
 The relevant lines are highlighted above – some code has been omitted for clarity.
  
-Unfortunately, the website we have been using (in our example code) to submit our username/password over does not support HTTPS, so we will not be able to demonstrate it in our current code. Below is a code sample of how HTTPS would be accomplished.
+Unfortunately, the website we have been using (in our example code) to submit our username/password over does not support HTTPS, so we will not be able to demonstrate it in our current code. Below is a code sample of how HTTPS could be accomplished. We should also import javax.net.ssl.HttpsURLConnection instead of java.net.HttpURLConnection. 
 ```java 
 URL url = new URL("https://en.wikipedia.org/wiki/Main_Page");
 HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
@@ -378,8 +378,6 @@ urlConnection.disconnect();
 }
 
 ```
-
-Of course, we would then need to import javax.net.ssl.HttpsURLConnection instead of java.net.HttpURLConnection.
 
 Resources
 For more information, consult these links:
