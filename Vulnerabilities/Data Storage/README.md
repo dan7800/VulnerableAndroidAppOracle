@@ -2,19 +2,18 @@
 
 Android provides several options for developers to store data locally using different formats such as files, SharedPreferences and SQLite. Data stored using any of these formats will be stored in the same path where the application is stored on the phone which is:  
 “data/data/package_name”  
-If we explore this path we can see that there are three folders which are used to store local data in Android, these folders are:
-
+There are three folders in this path that are used to store the local data.
 * Files
 * Databases
 * SharedPreferences
 
 The important thing to know is that Android does not encrypt this data, therefore anyone or any app can go to that path and read the stored data.  
-Therefore, we advise developers to not use these types of data storage when storing secure information such as username and password since this information can be readable by anyone.
+Therefore, we advise developers to not use these type of data storage techniques when storing secure information such as username and passwords since this information can be accessed by anyone.
 In this tutorial, we will build a simple Android app that allows users to store their usernames and passwords using SharedPreferences data storage, after that we will demonstrate how this data can be accessed and read.
 
 ### Steps to Build the App
 
-1. Open Android Studio and create new Android project and name it “SharedPreferencesExample”. Make sure to save the package name somewhere on your computer since you will need it in a later stage of this tutorial. Click next.
+1. Open Android Studio and create new Android project and name it “SharedPreferencesExample”. Make sure to save the package name somewhere on your computer since you will need it in later steps of this tutorial. Click next.
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image1.png" alt="Image">
 
@@ -30,8 +29,8 @@ In this tutorial, we will build a simple Android app that allows users to store 
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image4.png" alt="Image">
 
-5. Delete the “Hello World” TextView by selecting the TextView and then press the delete button on your keyboard.
-6. Copy and paste the following code into acitivity_main.xml
+5. Delete the “Hello World” text by selecting it in the TextView and then delete it.
+6. Next copy and paste the following code into acitivity_main.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -150,7 +149,7 @@ Toast.LENGTH_LONG).show();
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image6.png" alt="Image">
 
 
-9. Once the app has run, enter a username and a password and then click on the store button as shown in the following image.
+9. Once the app starts running, enter a username and a password and then click on the store button as shown in the following image.
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image7.png" alt="Image">
 
@@ -178,7 +177,7 @@ Once you have executed the commends above you will be able to read the data whic
 
 ### Conclusion
 
-As shown in the image above, the data which you entered and stored in the app can be easily accessed and read. Therefore, using such a data storage type to store sensitive users’ information such as passwords or bank information can threaten the users.
+As shown in the image above, the data which you entered and stored in the app can be easily accessed and read. Therefore, using such a data storage technique to store users’ information such as passwords or bank information can affect the users.
 
 ### Fixing the Problem
 
@@ -190,9 +189,9 @@ There are two solutions which can help in encrypting the stored data and fixing 
 
 ### Steps to Fix the Problem
 
-We are going to use the same app which we just built and then add an encryption and decryption technique to it known as Cipher which will help in encrypting the date before we store using SharedPreferences.
+We are going to use the same app which we just built and then add an encryption and decryption technique to it known as Cipher which will help in encrypting the data before we store the data using SharedPreferences.
 
-To start encrypting the data using Cipher you first need to add the cipher method to your source code and then you can call the Cipher method to encrypt the entered data before store it using SharedPreferences.
+To start encrypting the data using Cipher you first need to add the cipher method to your source code and then you can call the Cipher method to encrypt the entered data before it is stored using SharedPreferences.
 
 Your final source code (MainActivity.Java) should look like the following (remove the code highlighted in red and add the code highlighted in green):
 
@@ -279,12 +278,12 @@ Toast.LENGTH_LONG).show();
 
 ```
 
-Once you have updated the code run the application again by click on the run button.
-Basically, this encryption technique considered to be one of the basic encryption techniques, it works by adding shift for every character when we want to encrypt the data, and when we want to decrypt the data we subtract that shift to the origin character.
+Once you have updated the code run the application again by clicking on the run button.
+Basically, this encryption technique is considered to be one of the basic encryption techniques. It works by adding desired number of shift for every character when we want to encrypt the data, and when we want to decrypt the data we subtract that exact number of shift to get the original character.
 
 ###Steps to Read the App Data after the encryption
 
-To read the app data again and make sure that they encrypt it, we first need to open Terminal or Command Prompt and execute the following commands:
+To read the app data and to make sure that it is encrypted, we first need to open Terminal or Command Prompt and execute the following commands:
 
 get the android sdk directory which can be found under Gradle Scripts -> local.properties as shown below
 
