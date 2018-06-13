@@ -1,6 +1,6 @@
 # XML
 
-Android uses XML files to store static data (data that does not change through execution of the app). For example, translated strings (in languages such as English, Spanish, or Arabic) are stored in XML files for multi-language support. Like a tradional Windows application using a .exe file to install the software, an Android app is packaged into an APK file. The APK files are compressed files that contain many XML and Java files, that make up the application.  Anyone could unzip the APK and read the data that was saved in XML. 
+Android uses XML files to store static data (data that does not change through execution of the app). For example, translated strings (in languages such as English, Spanish, or Arabic) are stored in XML files for multi-language support. Like a tradional Windows application using a .exe file to install the software, an Android app is packaged into an APK file. The APK files are compressed files that contain many XML and Java files, that make up the application.  Anyone could unzip the APK and read the data that is saved in XML. 
 
 Many developers store important information in XML, such as an Ads number or a Google Maps API key. This approach is precarious, because someone who can reverse engineer the app could read all the sensitive data. The attacker could then use the stolen API key to obtain access to paid services, possibly running up charges on the developer’s account. 
 
@@ -45,21 +45,22 @@ Perform the following steps to locate and copy the generated APK file from the d
 	The default location on Mac OS is: cd ~/Library/Android/sdk/platform-tools
 	
 	The default location on Windows is: C:\Users\YOUR_USERNAME_HERE\AppData\Local\Android\sdk\platform-tools
+	Note: Replace the text "YOUR_USERNAME_HERE" with the username you logged into the computer. 
 
 3. Run the following command to retrieve the location of the APK file on the emulator:
 
 	./adb shell pm path YOUR_PACKAGE_NAME_GOES_HERE
 	
-	Note: Replace the text "YOUR_PACKAGE_NAME_GOES_HERE" with the actual package name you specified when creating the project. If you cannot rember the package name, refer to the AndroidManifest.xml OR run the following command:./adb shell pm list packages
+	Note: Replace the text "YOUR_PACKAGE_NAME_GOES_HERE" with the actual package name you specified when creating the project. If you cannot rember the package name, refer to the AndroidManifest.xml OR run the following command: ./adb shell pm list packages
 	
 	The output will look like: package:/data/app/com.example.someapp.apk 
-	We want the part that comes after “package:”
+	And select the part after the “package:”
 	
 4.	Run the following command to copy the APK file to your development machine:
 	
 	./adb pull /data/app/com.example.someapp.apk /PATH/TO/DESTINATION/GOES/HERE
 	
-	Note: Replace the text "/PATH/TO/DESTINATION/GOES/HERE" with the path to where the APK should be copied to
+	Note: Replace the text "/PATH/TO/DESTINATION/GOES/HERE" with the path to where you want to copy the APK. 
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/XML/image6.png" alt="Image">
 
@@ -69,7 +70,7 @@ Perform the following steps to locate and copy the generated APK file from the d
 	
 	b)	Use a tool like: http://ibotpeaches.github.io/Apktool/ follow the instructions to install and run it
 	
-6. After reverse engineering the APK file, open the "strings.xml" file located at: \base\res\values in the extracted location. (Note: depending on your settings, the file "google_maps_api.xml" will be copied into the APK and you would not need to open the "strings.xml" file)
+6. After reverse engineering the APK file, open the "strings.xml" file located at: \base\res\values from the extracted location. (Note: depending on your settings, the file "google_maps_api.xml" will be copied into the APK and you would not need to open the "strings.xml" file)
 
 7. Scroll through this file and you will see google maps API key 
 
@@ -81,4 +82,4 @@ This is an issue because your API key could be misused.
 
 There are multiple ways to attack the problem. One solution is to only keep client keys on the device, retrieving API keys from a server you control via web requests. Essentially, we never store API keys in the APK because we assume that it can and will be decompiled.
 
-Another is to use a tool to obfuscate your code, like ProGuard. In this approach, we would be trying to make it harder for people to reverse engineer the APK.
+Another solution is to use a tool to obfuscate your code, like ProGuard. In this approach, we make it harder and uncler for the attacker to reverse engineer the APK.
