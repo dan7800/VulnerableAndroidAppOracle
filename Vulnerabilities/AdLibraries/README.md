@@ -4,9 +4,9 @@
 
 An Ads library is one of the most valuable tools for every developer to make money from his app once it is published on the Play store. It is developed in the same way as any android application, however the project type of Ads library will be Android Library and not Android Application. This implies that it is not meant to be part of a specific Android application, also it uses android permissions and works in same way as an Android app does. Whenever an ad appears to any user who uses the developer’s app, the Ads company will pay the developer based on impressions and clicks.  
 
-The security concern here revolves around permissions. When we add the Ads library to our app it will be a part of our application, that means that the Ads library gets access to all permissions that our app is granted access to by the user. For example, if our app needs access to the user’s messages to perform some operation for which the corresponding required permission is specified, the Ads library that we added to our application will have same permission and will be able to read all messages once the user grants access.  
+The security concern here revolves around permissions. When we add the Ads library to our app it will be a part of our application, that means that the Ads library gets access to all permissions that our app is granted access to by the user. For example, if our app needs access to the user’s messages to perform some operation for which the corresponding required permission is specified, the Ads library that we added to our application will have the same permission and will be able to read all messages once the user grants access.  
 
-We have demonstrated an example to explain how an Ads company gets access to a user’s confidential data. By creating the Ads library that displays Ads to the user, it can, at the very same time, read the user’s contact information and messages. We will also explain the disadvantage of declaring unused permissions in the app’s Manifest file, and how it will be use by the Ads company in devices running Android API level < 23.
+We have demonstrated an example to explain how an Ads company gets access to a user’s confidential data. By creating the Ads library that displays Ads to the user, it can, at the very same time, read the user’s contact information and messages. We will also explain the disadvantage of declaring unused permissions in the app’s Manifest file, and how it will be used by the Ads company in devices running Android API level < 23.
 
 
 ### Activity Instructions
@@ -24,9 +24,9 @@ We have demonstrated an example to explain how an Ads company gets access to a u
 
 #### Creating Ads Library
 
-We will build a simple Ads library display message that reads, “Wonderful coffee apps for free” while trying to have it read user messages and user contact info in background.
+We will build a simple Ads library display message that reads, “Wonderful coffee apps for free” while trying to make it read user messages and user contact info in background.
 
-Follow the following steps to create a new module. Go to File-> New->New Module, then select "Android Library" and name it "Ads Library". 
+Follow the below mentioned steps to create a new module. Go to File-> New->New Module, then select "Android Library" and name it "Ads Library". 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image55.png" alt="Image">
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image56.png" alt="Image">
@@ -338,7 +338,7 @@ Make sure that the imported package name is correct
 
 ### Results:
 
-When the app Runs and click “Load messages”. Inbox messages will be loaded then adds will display.
+When the app Runs and click “Load messages”. Inbox messages will be loaded then ads will display.
 
   <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image15.png" alt="Image">
 
@@ -350,13 +350,13 @@ Go to Android Monitor console from bottom of Android Studio window and check the
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image17.png" alt="Image">
 
-The text in the green box explains that Ads cannot read contact because permission isn’t granted by user, if the developer adds contact permission in Manifest, For Android API<23 the ads will read all his contact info even it the user does not grant permission or the developer did not use it
+The text in the green box explains that Ads cannot read contact because permission isn’t granted by user, if the developer adds contact permission in Manifest. For Android API<23 the ads will read all the user contact info even it the user did not grant permission or the developer did not use it
 ```xml
 <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
 ```
 How to Fix the problem?
 
 To Fix this problem, add the Ads library to an empty project before using it, run the project and track logcat, then see the results. If you notice any permission denial like the one highlighted in green below, it would mean that the Ads Library is trying to use that permission. However, your empty app doesn’t have declaration for using that permission. Hence, try and avoid using having any Ads library declaring the same permission that you use in your app,
-For example, if your app needs to read SMSs and the Ads library reads SMSs, don’t add it, however if your app need to read SMS and Ads library want read contact add it. Because Ads library couldn’t do anything with users contact information because you did not add permission to use contact in your app manifest.
+For example, if your app needs to read SMS and the Ads library reads SMS, don’t add it, however if your app need to read SMS and Ads library wants to access the contact information then add it. Because Ads library couldn’t do anything with users contact information because you did not add permission to use contact in your app manifest.
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image17.png" alt="Image">
