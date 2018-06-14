@@ -9,7 +9,7 @@ We will build an app that sends sensitive data like the user’s phone number to
 
 ### Creating HTML file
 
-Open new file names News.html
+Open new file named News.html
 
 ```html
 
@@ -22,7 +22,7 @@ Open new file names News.html
 <body>
 <h1> Best Bird for weekend</h1>
 <img src="bird.jpg" width="200" hight="200">
-<p>This app is getting the phone number of any phone browser it using related app and display the phone number bellow</p>
+<p>This app is getting the phone number of any phone browser it is using related app and display the phone number bellow</p>
 
 <br/>
 <p id="phone"> </p>
@@ -53,7 +53,7 @@ If you do not want to test it with a local server you can browse this url https:
 
 ### Steps to build the News View App
 
-1. Open new project with name “AndroidJavaScript”, save the package name will will need next
+1. Open new project with name “AndroidJavaScript”, save the package name as we need it in later steps.
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image3.png" alt="Image">
 
@@ -61,7 +61,7 @@ If you do not want to test it with a local server you can browse this url https:
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image4.png" alt="Image">
 
-3. You may then follow use all default settings when creating the project and create an Empty Activity
+3. You may then continue with default settings when creating the project and create an Empty Activity
 
 2. Paste the following code to res/layout/activity_main.xml
 
@@ -335,8 +335,7 @@ Another website can embed the same permissions included in your website’s scri
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image8.png" alt="Image">
 
-### Example of the user view hacker website, and the hacker get his phone number
-
+### Hacker's website
 If you do not want to run local server you can use this url https://bitly.com/2sfdX0v  (0->zero) as the hacker url. 
 NOTE: If you want to see hacker website code, open this url https://bitly.com/2sfdX0v on a browser and right click on the page-> view page source to view code.
 
@@ -344,7 +343,7 @@ NOTE: If you want to see hacker website code, open this url https://bitly.com/2s
 
 ### Fix This Problem
 
-To fix this problem, we must send sensitive data only to the websites that we wish to authorize to access this data like our websites, or we could enable JavaScript to be run only in our website. The code below allows for sending sensitive data only to the websites that we authorize. Open MainActivity.java, remove the previous code except package name(first line) and paste the below code.
+To fix this problem, we must send sensitive data only to the websites that are authorised to access the data. for eg., our websites, or we could also enable JavaScript to be run only in our website. The code below allows sending sensitive data only to the websites that we authorize. Open MainActivity.java, remove the previous code except package name(first line) and paste the below code.
 
 ```java
 package ***YOUR PACKAGE NAME***
@@ -491,6 +490,6 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-As we see our website could access to phone number while hacker website cannot.
+As we see our website could access the phone number while hacker website cannot.
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AndroidJavascript/image10.png" alt="Image">
