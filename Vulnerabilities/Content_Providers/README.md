@@ -1,10 +1,10 @@
 # Content Provider
 ### Background
-Content Providers allow one app to share its data with another app.  They are the standard interface for code in one process to connect with data in another. Many Android apps have data specific to the app, while in some cases, we may need to share app data with another app. For instance, consider the default contact app that has all our contact information. Another app, such as an instant messaging app that needs the user to pick one or more contacts, as part of their actions, may need to access contact information. This requires the contact app to have contact information on the device managed by a content provider for other apps to read from. The Messenger (default messaging app) app is another example of an app that requires access to contact information. 
-The security weakness here is that if we develop an app that shares data, we must make sure that we are aware of what the data constitutes and what other apps have access to the data, especially, if we need to share sensitive information. For example, if we save the user’s credit card information, in plain text, encapsulated by a content provider, another app on the device may use it without having the user to enter it again. We must configure content providers to allow secure access by other applications.
+Content Providers allow one app to share its data with another app.  They are the standard interface for code in one process to connect with data in another. Many Android apps have data specific to the app, while in some cases, we may need to share app data with another app. For instance, consider the default contact app that has all our contact information. Another app, such as an instant messaging app that needs to pick one or more contacts, as part of it's actions, and may need to access the user's contact information. Hence the information in the contact app is managed by a content provider for other apps to access it. The Messenger (default messaging app) app is another example of an app that requires access to contact information. 
+The security weakness here is that if we develop an app that shares data, we must make sure that we are aware of what the data consists of and what kind of privileges do other apps have on the shared data. Especially, if we need to share sensitive information. For example, if we save the user’s credit card information, in plain text, encapsulated by a content provider, another app on the device may use it without having the user to enter it again. We must configure content providers to allow secure access by other applications.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/ContentProvider/image1.png" alt="Image">
 
-We will demonstrate an example, showing how one app stores a student’s name and age behind a content provider. Then we shall see how we will share this data only with the apps we trust. We shall also see how easy it for a hacker to read this data if it is not encrypted.
+We will demonstrate an example, showing how one app stores a student’s name and age behind a content provider. Then we shall see how we will share this data only with the apps we trust. And also see how easy it is for a hacker to read this data if it is not encrypted.
 
 
 ### Activity Instructions
@@ -601,7 +601,7 @@ Content query --uri “content provider url”
 
 ### How to protect our Data:  
 
-We need to encrypt and decrypt the data, so when we save into content provider we have to encrypt and when we read we have to decrypt.
+We need to encrypt and decrypt the data, so when we save the data to content provider it has to be encrypted and has to be decrypted before we read it.  
 
 1- Update MaiActivity.java in “contentProvidershacker” to be like this
 
@@ -743,7 +743,7 @@ uri.toString(), Toast.LENGTH_LONG).show();
 
 ### Results:
 
-Run the apps and see, as we see the hacker cannot read the data.
+Run the apps and we can notice that hacker cannot read the data.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/ContentProvider/image11.png" alt="Image">
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/ContentProvider/image12.png" alt="Image">
