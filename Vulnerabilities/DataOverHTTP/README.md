@@ -1,7 +1,7 @@
 # Secure HTTP Requests
 ### Background
-In Android, we use HTTP (HyperText Transfer Protocol) to exchange data between the client and the server. Sometimes, we send sensitive data, like username and password or user location from client to server over HTTP. Keep in mind that this request will move over the network. When this data is in transit, it is very easy for a hacker to intercept. Many people could interrupt and read this request data, so we must protect it.
-We will demonstrate an example of how to send sensitive data between client to server over HTTP. We will then explain how hackers could read this data, along with suggestions of how to protect against this.
+In Android, we use HTTP (HyperText Transfer Protocol) to exchange data between the client and the server. Sometimes, we send sensitive data, like username and password or user location from client to server over HTTP. Keep in mind that this request will move over the network. When this data is in transit, it is very easy for a hacker to intercept. We need to protect the data as many people could intercept and read it.
+We will demonstrate an example of how to send sensitive data between client and server over HTTP. We will then explain how hackers could read this data, along with suggestions to protect against this.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image1.png" alt="Image">
 
 ### Steps to build the app:
@@ -17,7 +17,7 @@ On the next page, click next. The default API level will suffice for our needs r
 3.	 Our project will look like this when we are finished with the layout.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataOverHTTP/image5.png" alt="Image">
 To do this, we will update activity_main.xml with the code below. The activity_main.xml file can be found under “res/layout” in the folders in the panel to the left.
-Click the “Text” tab, found at the bottom of the window next to Design view to see the text view of the XML file. By default, it shows you the Design view first, which is what’s currently visible in the picture above.
+Click the “Text” tab, found at the bottom of the window next to Design view to see the text view of the XML file. By default, it shows you the Design view first, which currently visible in the picture above.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -234,7 +234,6 @@ setContentView(R.layout.activity_main);
 
 ```
 5. Add permission to access the internet to Manifest.xml, found under “app/manifests/”. 
-The highlighted line is the way we’re going to add the permission.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -366,7 +365,7 @@ data+=(c.getString(c.getColumnIndex( _ID)) +", " +  c.getString(c.getColumnIndex
 ```
 The relevant lines are highlighted above – some code has been omitted for clarity.
  
-Unfortunately, the website we have been using (in our example code) to submit our username/password over does not support HTTPS, so we will not be able to demonstrate it in our current code. Below is a code sample of how HTTPS could be accomplished. We should also import javax.net.ssl.HttpsURLConnection instead of java.net.HttpURLConnection. 
+Unfortunately, the website we have been using (in our example code) to submit our username/password does not support HTTPS, so we will not be able to demonstrate it in our current code. Below is a code sample of how HTTPS could be accomplished. We should also import javax.net.ssl.HttpsURLConnection instead of java.net.HttpURLConnection. 
 ```java 
 URL url = new URL("https://en.wikipedia.org/wiki/Main_Page");
 HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
