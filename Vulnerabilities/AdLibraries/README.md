@@ -350,13 +350,13 @@ Go to Android Monitor console from bottom of Android Studio window and check the
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image17.png" alt="Image">
 
-The text in the green box explains that Ads cannot read contact because permission isn’t granted by user, if the developer adds contact permission in Manifest. For Android API<23 the ads will read all the user contact info even it the user did not grant permission or the developer did not use it
+The text in the green box explains that Ads cannot read contact because permission isn’t granted by user. For Android API<23 the ads will read all the user contact info even if the user did not grant permission or the developer did not use it
 ```xml
 <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
 ```
 How to Fix the problem?
 
 To Fix this problem, add the Ads library to an empty project before using it, run the project and track logcat, then see the results. If you notice any permission denial like the one highlighted in green below, it would mean that the Ads Library is trying to use that permission. However, your empty app doesn’t have declaration for using that permission. Hence, try and avoid using having any Ads library declaring the same permission that you use in your app,
-For example, if your app needs to read SMS and the Ads library reads SMS, don’t add it, however if your app need to read SMS and Ads library wants to access the contact information then add it. Because Ads library couldn’t do anything with users contact information because you did not add permission to use contact in your app manifest.
+For example, if your app needs to read SMS and the Ads library reads SMS, don’t add it, however if your app need to read SMS and Ads library wants to access the contact information then add it. Because Ads library can’t do anything with users contact information because you did not add permission to use contact in your app manifest.
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/AdsLibrary/image17.png" alt="Image">
