@@ -8,8 +8,8 @@ There are three folders in this path that are used to store the local data.
 * SharedPreferences
 
 The important thing to know is that Android does not encrypt this data, therefore anyone or any app can go to that path and read the stored data.  
-Therefore, we advise developers to not use these type of data storage techniques when storing secure information such as username and passwords since this information can be accessed by anyone.
-In this tutorial, we will build a simple Android app that allows users to store their usernames and passwords using SharedPreferences data storage, after that we will demonstrate how this data can be accessed and read.
+Therefore, we advise developers to not use these types of data storage techniques when storing secure information such as username and passwords since this information can be accessed by anyone.
+In this tutorial, we will build a simple Android app that allows users to store their usernames and passwords using SharedPreferences, after that we will demonstrate how this data can be accessed and read.
 
 ### Steps to Build the App
 
@@ -170,7 +170,7 @@ get the android sdk directory which can be found under Gradle Scripts -> local.p
 4. cd shared_prefs
 5. cat MyPrefLogin.xml
 
-Once you have executed the commends above you will be able to read the data which you stored using the app as shown the following image.
+Once you have executed the comments above you will be able to read the data which you stored using the app as shown in the following image.
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image8.png" alt="Image">
 
