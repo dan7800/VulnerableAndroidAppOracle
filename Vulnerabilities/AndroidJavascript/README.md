@@ -2,7 +2,7 @@
 
 ### Background
 
-Android has a tool named WebView allowing users to visit websites and view other content on the web. This web content normally consists of some HTML, CSS and JavaScript that are rendered in WebView. Android allows developers to enable or disable running JavaScript in WebView for security purposes. As JavaScript is client side, Android Allows JavaScript to read and write data to and from the device. For example, we could have JavaScript display an alert or open a new activity on the Android device. This means that anyone could view the source code of a web page that has Android JavaScript, get access to the script and use this script (in another website) to access data on the device.
+Android has a tool called WebView allowing users to visit websites and view other content on the web. This web content normally consists of some HTML, CSS and JavaScript that are rendered in WebView. Android allows developers to enable or disable running JavaScript in WebView for security purposes. As JavaScript is client side, Android allows JavaScript to read and write data from the device. For example, we could have JavaScript display an alert or open a new activity on the Android device. This means that anyone could view the source code of a web page that has Android JavaScript, get access to the script and use this script (in another website) to access data on the device.
 
 Today we will investigate how sending and receiving sensitive data using JavaScript is not secure.   
 We will build an app that sends sensitive data like the user’s phone number to the server, and then demonstrate how a hacker’s app can read and get access to this data.
@@ -343,7 +343,7 @@ NOTE: If you want to see hacker website code, open this url https://bitly.com/2s
 
 ### Fix This Problem
 
-To fix this problem, we must send sensitive data only to the websites that are authorised to access the data. for eg., our websites, or we could also enable JavaScript to be run only in our website. The code below allows sending sensitive data only to the websites that we authorize. Open MainActivity.java, remove the previous code except package name(first line) and paste the below code.
+To fix this problem, we must send sensitive data only to the websites that are authorised to access the data. for e.g.,we could enable JavaScript to be run only in our website. The code below allows sending sensitive data only to the websites that we authorize. Open MainActivity.java, remove the previous code except package name(first line) and paste the below code.
 
 ```java
 package ***YOUR PACKAGE NAME***
