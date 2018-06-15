@@ -1,6 +1,6 @@
 # Content Provider
 ### Background
-Content Providers allow one app to share its data with another app.  They are the standard interface for code in one process to connect with data in another. Many Android apps have data specific to the app, while in some cases, we may need to share app data with another app. For instance, consider the default contact app that has all our contact information. Another app, such as an instant messaging app that needs to pick one or more contacts, as part of it's actions, and may need to access the user's contact information. Hence the information in the contact app is managed by a content provider for other apps to access it. The Messenger (default messaging app) app is another example of an app that requires access to contact information. 
+Content Providers allow one app to share its data with another app.  They are the standard interfaces for code in one process to connect with data in another. Many Android apps have data specific to the app, while in some cases, we may need to share app data with another app. For instance, consider the default contact app that has all our contact information. Another app, such as an instant messaging app that needs to pick one or more contacts, as part of it's actions, and may need to access the user's contact information. Hence the information in the contact app is managed by a content provider for other apps to access it. The Messenger (default messaging app) app is another example of an app that requires access to contact information. 
 The security weakness here is that if we develop an app that shares data, we must make sure that we are aware of what the data consists of and what kind of privileges do other apps have on the shared data. Especially, if we need to share sensitive information. For example, if we save the user’s credit card information, in plain text, encapsulated by a content provider, another app on the device may use it without having the user to enter it again. We must configure content providers to allow secure access by other applications.
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/ContentProvider/image1.png" alt="Image">
 
@@ -659,7 +659,7 @@ data+=(c.getString(c.getColumnIndex( _ID)) +", " + cipher(c.getString(c.getColum
 }
 
 ```
-2- Update MaiActivity.java in “contentProviders” to be like this
+2- Update MainActivity.java in “contentProviders” to be like this
 ```java
 public class MainActivity extends AppCompatActivity {
 
