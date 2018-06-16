@@ -7,7 +7,7 @@ Instructions For use
 
 3. Enter details that you would want to add in the application and press the save button. 
 
-![app screenshot] (https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/PrivateInfo/PrivateInfo.png)
+![app screenshot](https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/PrivateInfo/PrivateInfo.png)
 
 4. Enter the following URL in a web browser [http://vm-007.casci.rit.edu:8082/](http://vm-007.casci.rit.edu:8082/)
 
