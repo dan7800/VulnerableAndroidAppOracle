@@ -12,3 +12,6 @@ Instructions For use
 4. Enter the following URL in a web browser [http://vm-007.casci.rit.edu:8082/](http://vm-007.casci.rit.edu:8082/)
 
 5. You can see the data sent on the webpage you just visited.
+
+
+This demonstrates why it is important for you be careful about the sensative information that you share with the apps that you use. It is very easy for these Apps to share information with third parties, which you may want to keep hidden. Apps may share your data with other gropus that you may not want to have this information, or could even have this information stolen.
