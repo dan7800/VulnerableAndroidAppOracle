@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button saveButton;
     EditText nameText,colorText,petName;
-    String url = "http://192.168.2.2:8081";
+    String url = "http://vm-007.casci.rit.edu:8081";
     URL urlObject;
 
 
