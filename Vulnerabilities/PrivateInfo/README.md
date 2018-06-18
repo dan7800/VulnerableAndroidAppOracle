@@ -1,4 +1,4 @@
-The android app here demonstrates the need for awareness as to how your personal info is handled across the internet. Any details that you may save in an application may appear elsewhere if you have not read the terms of use or what the application may do with your data. In this particular example information that you enter in the application is submitted to the server that the app is set to send it to.
+The android app here demonstrates the need for awareness as to how your personal info is handled across the internet. Any details that you will save in an application may appear elsewhere if you have not read the terms of use or what the application may do with your data. In this particular example, information that you enter in the application will be submitted to the server that the app has set. 
 
 Instructions For use
 1. Use Android Studio to run application with min API level 27
@@ -14,4 +14,4 @@ Instructions For use
 5. You can see the data sent on the webpage you just visited.
 
 
-This demonstrates why it is important for you be careful about the sensative information that you share with the apps that you use. It is very easy for these Apps to share information with third parties, which you may want to keep hidden. Apps may share your data with other gropus that you may not want to have this information, or could even have this information stolen.
+This example acknowlegdes that it is necessary to be cautious while sharing the sensitive data with the apps we use. It is very easy for the apps to share information with third parties, which could be private info. Apps might share your data with other groups that you may not want to have this information, or could even have this information stolen.
