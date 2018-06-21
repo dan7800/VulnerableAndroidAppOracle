@@ -128,7 +128,7 @@ tools:context="com.example.hussienalrubaye.contentproviders.MainActivity">
 </android.support.design.widget.CoordinatorLayout>
 
 ```
-6. add class named “StudentProvider.java”
+6. add class named “StudentsProvider.java”
 ```java
 package com.example.hussienalrubaye.contentproviders;
 
