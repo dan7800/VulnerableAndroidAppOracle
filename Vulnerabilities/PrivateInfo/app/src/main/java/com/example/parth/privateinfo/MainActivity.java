@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -20,15 +21,16 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
+import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
 
     Button saveButton;
     EditText nameText,colorText,petName;
-    String url = "http://vm-007.casci.rit.edu:8081";
+    String url = "http://vm-007.casci.rit.edu:3000";
     URL urlObject;
-
-
+    String uniqueID = UUID.randomUUID().toString();
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         nameText = findViewById(R.id.editText);
         colorText = findViewById(R.id.editText2);
         petName = findViewById(R.id.editText3);
-
+        textView = findViewById(R.id.textView2);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,11 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
                     JSONObject infoObject = new JSONObject();
                     try {
+                        infoObject.put("uniqueIdKey",uniqueID);
                         infoObject.put("name", nameText.getText());
                         infoObject.put("color", colorText.getText());
                         infoObject.put("petName", petName.getText());
                         AsyncPostTask task = new AsyncPostTask();
                         task.execute(infoObject);
+                        textView.setText("Link: "+"http://vm-007.casci.rit.edu:3000/?id="+uniqueID);
                     } catch (JSONException exception) {
                         exception.printStackTrace();
                     }
@@ -66,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    class AsyncPostTask extends AsyncTask<JSONObject,Void,Void>{
+        class AsyncPostTask extends AsyncTask<JSONObject,Void,Void>{
         @Override
         protected Void doInBackground(JSONObject... jsonObjects) {
 
