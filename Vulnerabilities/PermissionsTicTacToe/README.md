@@ -1,4 +1,4 @@
-# Tic Tac Toe Permissions Activity
+# Tic Tac Toe Permissions Activity Instructions
 
 
 1. Run the activity by pressing the play button and start the app.
@@ -9,3 +9,9 @@
 6. After you win/lose the game, click share score.
 7. After that, you will see a new activity launched automatically.
 8. Here you will see the list of granted permissions.
+
+## Screenshots
+
+![main_screenshot](https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/PermissionsTicTacToe/main_screen.png)
+
+![result_screenshot](https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/PermissionsTicTacToe/results.png)
