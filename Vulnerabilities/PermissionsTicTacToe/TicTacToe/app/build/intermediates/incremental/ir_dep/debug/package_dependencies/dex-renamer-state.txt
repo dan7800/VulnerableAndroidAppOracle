@@ -1,0 +1,4 @@
+#Mon Jul 02 18:45:52 EDT 2018
+base.0=/Users/parth/Documents/Code/TicTacToe/app/build/intermediates/transforms/dexMerger/debug/10
+path.0=classes.dex
+renamed.0=classes.dex
