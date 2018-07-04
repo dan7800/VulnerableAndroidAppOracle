@@ -17,8 +17,6 @@ We will first create an example landing page. An example is located here https:/
 
 If you want, you Can create your own local version of the page by using the following:
 
-Creating HTML file
-
 Open new file named News.html
 
 ```html
