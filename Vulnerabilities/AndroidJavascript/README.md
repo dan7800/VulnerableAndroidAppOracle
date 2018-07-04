@@ -7,7 +7,17 @@ Android has a tool called WebView allowing users to visit websites and view othe
 Today we will investigate how sending and receiving sensitive data using JavaScript is not secure.   
 We will build an app that sends sensitive data like the user’s phone number to the server, and then demonstrate how a hacker’s app can read and get access to this data.
 
-### Creating HTML file
+
+
+
+### Landing Page
+
+We will first create an example landing page. An example is located here https://goo.gl/TIGDOb. As you can see this page looks pretty harmless.
+
+
+If you want, you Can create your own local version of the page by using the following:
+
+Creating HTML file
 
 Open new file named News.html
 
@@ -48,7 +58,6 @@ The website should look like this
 
 Then you can use any local webserver to serve the file.
 
-If you do not want to test it with a local server you can browse this url https://goo.gl/TIGDOb .   
 
 
 ### Steps to build the News View App
