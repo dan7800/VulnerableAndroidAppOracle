@@ -9,7 +9,7 @@ We will demonstrate an example, showing how one app stores a student’s name an
 
 ### Activity Instructions
 ### Our sender app : this app will write content provider
-1. Create new project named “contentproviders”, and the make sure to remember package name.
+1. Create new project named “contentproviders”, and the make sure to remember package name. The package name is important because if it is not correctly matched in code and simply copy pasted as below, you will face compile ERRORS!
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/ContentProvider/image2.png" alt="Image">
 
 2. Select project from type Blank Activity
