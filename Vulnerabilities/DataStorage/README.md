@@ -289,7 +289,7 @@ get the android sdk directory which can be found under Gradle Scripts -> local.p
 
 <img style="margin:10px;" src="https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/DataStorage/image10.png" alt="Image">
 
-1. cd android-sdk-directory (might need to switch to platform-tools)
+1. cd android-sdk-directory (might need to switch to platform-tools). Maske sure you switch into the relevant directory for your platform. On Linux it may be /home/<AccountName>/Android/Sdk/platform-tools. In place of <AccountName> insert your account name.
 2. ./adb shell
 [Note: On a Windows operating system the command is: adb shell]
 3. run-as your_package_name
