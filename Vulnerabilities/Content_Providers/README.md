@@ -128,6 +128,19 @@ tools:context="com.example.hussienalrubaye.contentproviders.MainActivity">
 </android.support.design.widget.CoordinatorLayout>
 
 ```
+Also make sure you add the folloing to your styles.xml between the 'resources' xml tag.
+```
+ <style name="AppTheme.PopupOverlay" parent="AppTheme.PopupOverlay">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+ </style>
+ <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">TITLE_COLOR_GOES_HERE</item>
+        <item name="android:textColorSecondary">SUBTITLE_COLOR_GOES_HERE</item>
+</style>   
+```
 6. add class named “StudentsProvider.java”
 ```java
 package com.example.hussienalrubaye.contentproviders;
