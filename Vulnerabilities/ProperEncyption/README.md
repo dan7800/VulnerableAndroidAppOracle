@@ -1,5 +1,6 @@
 # Proper Encryption Usage
 It is important to choose a proper and secure cipher suite in order to store data properly in an encrypted format.
+Run the given activity within Android Studio and choose which cipher you want to use. Then try breaking the ciphertext. The  ascending order of difficultly is ``Caesar Cipher -> Playfair Cipher -> AES``
 For example Breaking Caesar Cipher is relatively easy. <br>
 ## Caesar Cipher
 ![app screenshot](https://github.com/dan7800/VulnerableAndroidAppOracle/blob/master/Pictures/Proper%20Encryption/Caesar.png)
